@@ -40,6 +40,15 @@ Route::get('about',function(){
 	return view('about');
 });
 
+//NEWSLETTER
+Route::get('/newsletter', 'NewsletterController@index');
+Route::get('/newsletter/delete/{id}', 'NewsletterController@delete');
+Route::post('/newsletter/save', 'NewsletterController@save');
+
+//PROFILE
+Route::get('/profile', 'ProfileController@index');
+Route::post('/profile/update/{id}', 'ProfileController@update');
+
 Route::post('footer/update', 'FooterController@update');
 Route::post('about/update', 'AboutController@update');
 

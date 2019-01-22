@@ -9,11 +9,12 @@ class ProfileController extends Controller
     public function all()
     {
     	$profile = Profile::where('id', 1)->first();
-    	return view('admin.profile.index')->with('profile', $profile);
+    	return view('layouts.layouts-admin', compact('profile'));
     }
 
     public function update(Request $r)
     {
+        $id = $r->id;
     	$nama = $r->nama;
     	$alamat = $r->alamat;
     	$telepon = $r->telepon;
@@ -34,6 +35,6 @@ class ProfileController extends Controller
     	$profile->pengantar3 = $pengantar3;
     	$profile->save();
 
-    	return redirect(url('admin'));
+    	return redirect(url('/'));
     }
 }

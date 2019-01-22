@@ -67,7 +67,7 @@
                 <div class="sidebar-header">
                     <a href="#"><img src="{{asset('a/img/message/1.jpg')}}" alt="" />
                     </a>
-                    <h3>Andrar Son</h3>
+                    <h3>Ander Son</h3>
                     <p>Developer</p>
                     <strong>AP+</strong>
                 </div>
@@ -199,8 +199,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form method="POST" action="{{url('profile/update/{id}')}}">
+        @csrf
       <div class="modal-body">
             <div class="row">
+                <?php
+                    $profile = \App\Profile::all();
+                ?>
+                @foreach ($profile as $p)
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
                                                 <p>Full Name</p>
@@ -208,7 +214,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="fullname" />
+                                                <input type="hidden" name="id" value="{{$p->id}}">
+                                                <input type="text" name="nama" value="{{$p->nama}}" />
                                                 <i class="fa fa-user login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -220,7 +227,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="fullname" />
+                                                <input type="text" name="alamat" value="{{$p->alamat}}" />
                                                 <i class="fa fa-envelope login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -231,7 +238,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="phone" />
+                                                <input type="text" name="telepon" value="{{$p->telepon}}" />
                                                 <i class="fa fa-phone login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -242,7 +249,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="email" name="email" />
+                                                <input type="email" name="email" value="{{$p->email}}" />
                                                 <i class="fa fa-envelope login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -253,7 +260,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="email" />
+                                                <input type="text" name="fanspage" value="{{$p->fanspage}}" />
                                                 <i class="fa fa-calendar login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -264,7 +271,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10"></textarea>
+                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar1">{{$p->pengantar1}}</textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                         </div>
@@ -275,7 +282,7 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10"></textarea>
+                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar2">{{$p->pengantar2}}</textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                         </div>
@@ -286,17 +293,20 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10"></textarea>
+                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar3">{{$p->pengantar3}}</textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                         </div>
+
+                @endforeach
                                     </div>    
 
               </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
