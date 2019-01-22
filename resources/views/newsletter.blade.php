@@ -28,14 +28,15 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($newsletter as $n)
                                                 <tr>
                                                     <td></td>
                                                     <td>1</td>
                                                     <td>admin@uttara.com</td>
-                                                    <td class="datatable-ct"><i class="fa fa-trash"></i>
+                                                    <td class="datatable-ct"><a href="{{url('newsletter/delete', $n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
-                                             
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
