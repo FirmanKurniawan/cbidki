@@ -33,12 +33,15 @@ Route::get('visimisi', function(){
 Route::get('newsletter', function(){
 	return view('newsletter');
 });
-Route::geT('footer',function(){
+Route::get('footer',function(){
 	return view('footer');
 });
 Route::get('about',function(){
 	return view('about');
 });
+
+Route::post('footer/update', 'FooterController@update');
+Route::post('about/update', 'AboutController@update');
 
 Auth::routes();
 
