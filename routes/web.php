@@ -42,7 +42,7 @@ Route::get('about',function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@welcome');
 
 Route::prefix('admin')->group(function(){
 	Route::get('/', 'VisimisiController@indexvisimisi');
@@ -57,7 +57,7 @@ Route::prefix('admin')->group(function(){
 	Route::get('/visi/edit/{id}', 'VisimisiController@editvisi');
 	Route::post('/visi/update', 'VisimisiController@updatevisi');
 	Route::get('/visi/delete/{id}', 'VisimisiController@deletevisi');
-
+});
 Route::group(['prefix' => 'gallery'] , function(){ 
 	Route::get('/', 'GalleryController@indexgallery');
 	Route::get('/add', 'GalleryController@addgallery');

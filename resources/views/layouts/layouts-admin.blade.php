@@ -67,8 +67,7 @@
                 <div class="sidebar-header">
                     <a href="#"><img src="{{asset('a/img/message/1.jpg')}}" alt="" />
                     </a>
-                    <h3>Andrar Son</h3>
-                    <p>Developer</p>
+                    <h3>{{ Auth::user()->name }}</h3>
                     <strong>AP+</strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap">
@@ -137,7 +136,11 @@
                                               
                                                   <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
                                                 </li>
-                                                <li><a href="" style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
+                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
+                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                     @csrf
+                                                </form>
                                                 </li>
                                             </ul>
                                         </li>
