@@ -63,7 +63,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/misi/edit/{id}', 'VisimisiController@editmisi');
     Route::post('/misi/update', 'VisimisiController@updatemisi');
     Route::get('/misi/delete/{id}', 'VisimisiController@deletemisi');
-});
+    
     Route::get('/visi/add', 'VisimisiController@addvisi');
     Route::post('/visi/save', 'VisimisiController@savevisi');
     Route::get('/visi/edit/{id}', 'VisimisiController@editvisi');

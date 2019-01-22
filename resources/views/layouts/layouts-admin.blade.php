@@ -67,12 +67,9 @@
                 <div class="sidebar-header">
                     <a href="#"><img src="{{asset('a/img/message/1.jpg')}}" alt="" />
                     </a>
-<<<<<<< HEAD
                     <h3>{{ Auth::user()->name }}</h3>
-=======
                     <h3>Ander Son</h3>
                     <p>Developer</p>
->>>>>>> 931158b588a582d3e4b8f02f31b7920f1946f7f9
                     <strong>AP+</strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap">
