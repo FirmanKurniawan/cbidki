@@ -13,7 +13,7 @@ class CreateVisimisiTable extends Migration
      */
     public function up()
     {
-        Schema::create('visimisi', function (Blueprint $table) {
+        Schema::create('visimisis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('isi');
             $table->string('tipe');
@@ -28,6 +28,6 @@ class CreateVisimisiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visimisi');
+        Schema::dropIfExists('visimisis');
     }
 }
