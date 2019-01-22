@@ -14,7 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('gallery', function(){
+	return view('gallery');
+});
+Route::get('visimisi', function(){
+	return view('visimisi');
+});
+Route::get('newsletter', function(){
+	return view('newsletter');
+});
+Route::geT('footer',function(){
+	return view('footer');
+});
+Route::get('about',function(){
+	return view('about');
+});
