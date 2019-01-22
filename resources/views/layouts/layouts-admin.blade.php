@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
+ 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -55,7 +55,7 @@
         ============================================ -->
     <script src="{{asset('a/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
-
+ 
 <body class="materialdesign">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -67,13 +67,17 @@
                 <div class="sidebar-header">
                     <a href="#"><img src="{{asset('a/img/message/1.jpg')}}" alt="" />
                     </a>
+<<<<<<< HEAD
+                    <h3>{{ Auth::user()->name }}</h3>
+=======
                     <h3>Ander Son</h3>
                     <p>Developer</p>
+>>>>>>> 931158b588a582d3e4b8f02f31b7920f1946f7f9
                     <strong>AP+</strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
-                        
+                       
                         <li class="nav-item"><a href="{{url('/')}}"><i class="fa fa-dashboard"></i>
                             <span class="mini-dn">Dashboard</span> <span class="indicator-right-menu"></span></a>
                         </li>
@@ -117,7 +121,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
-                                
+                               
                             </div>
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                 <div class="header-right-info">
@@ -126,7 +130,7 @@
                                            
                                             <div role="menu" class="author-message-top dropdown-menu animated flipInX">
                                                
-                                        
+                                       
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                 <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
@@ -134,17 +138,21 @@
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX" style="background-color:#f47142 ">
-                                              
+                                             
                                                   <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
                                                 </li>
-                                                <li><a href="" style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
+                                                <li><a href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
+                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                     @csrf
+                                                </form>
                                                 </li>
                                             </ul>
                                         </li>
                                        
                                 </div>
                             </div>
-
+ 
                         </div>
                     </div>
                 </div>
@@ -219,7 +227,7 @@
                                                 <i class="fa fa-user login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
-        
+       
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
                                                 <p>Alamat</p>
@@ -297,10 +305,10 @@
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                         </div>
-
+ 
                 @endforeach
                                     </div>    
-
+ 
               </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -312,11 +320,11 @@
 </div>
 </div>
 </div>
-
+ 
             <!-- Transitions End-->
         </div>
     </div>
-
+ 
     <!-- Footer Start-->
     <div class="footer-copyright-area">
         <div class="container-fluid">
@@ -331,7 +339,7 @@
     </div>
     <!-- Footer End-->
     <!-- Chat Box Start-->
-    
+   
     <!-- Chat Box End-->
     <!-- jquery
         ============================================ -->
@@ -396,5 +404,5 @@
         ============================================ -->
     <script src="{{asset('a/js/main.js')}}"></script>
 </body>
-
+ 
 </html>
