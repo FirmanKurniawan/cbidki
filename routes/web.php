@@ -76,3 +76,6 @@ Route::group(['prefix' => 'gallery'] , function(){
     Route::post('/save', 'GalleryController@savegallery');
     Route::get('/delete/{id}', 'GalleryController@deletegallery');
 });
+
+
+Route::post('/visimisi/update', 'VisimisiController@visimisi_update');
