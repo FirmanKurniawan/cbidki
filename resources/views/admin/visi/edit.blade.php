@@ -12,7 +12,7 @@ Edit Pemasukan
         <div class="form-group col-md-25">
             <label>Isi</label>
             <label for="ckeditor"></label>
-            <textarea name="isi" id="ckeditor2">{{$a->isi}}</textarea>
+            <textarea name="isi" id="ckeditor2">{!!$a->isi!!}</textarea>
         </div>
          
           @csrf

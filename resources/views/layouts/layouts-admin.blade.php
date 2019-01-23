@@ -399,7 +399,16 @@
     <script src="{{asset('a/js/data-table/bootstrap-table-export.js')}}"></script>
     <!-- main JS
         ============================================ -->
-    <script src="{{asset('a/js/main.js')}}"></script>
+   <!--  <script src="{{asset('a/js/main.js')}}"></script>
+ -->
+
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'ckeditor1' );
+    </script>
+       <script>
+        CKEDITOR.replace( 'ckeditor2' );
+    </script>
 </body>
  
 </html>
