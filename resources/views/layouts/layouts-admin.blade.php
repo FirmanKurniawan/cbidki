@@ -51,6 +51,10 @@
     <!-- responsive CSS
         ============================================ -->
     <link rel="stylesheet" href="{{asset('a/css/responsive.css')}}">
+
+    <link href="{{ asset('fontawesome-free-5.5.0-web/css/all.css') }}" rel="stylesheet">
+     <link href="{{ asset('fontawesome-free-5.5.0-web/css/all.min.css') }}" rel="stylesheet">
+
     <!-- modernizr JS
         ============================================ -->
     <script src="{{asset('a/js/vendor/modernizr-2.8.3.min.js')}}"></script>

@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         	AboutSeeder::class,
         	FooterSeeder::class,
         	ProfileSeeder::class,
-        	VisiMisiSeeder::class
+        	VisiMisiSeeder::class,
+        	AdminSeeder::class
         ]);
     }
 }
