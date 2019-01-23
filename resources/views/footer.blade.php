@@ -23,38 +23,34 @@
                                     ?>
                                     @foreach($footer as $data)
                                     
-                                    <div class="container">
+                                 <!--    <div class="container">
 
 
                                     <div class="row">
-                                        <div class="col-md-13">
+                                        <div class="col-md-13"> -->
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 1</p>
                                                 <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="pengantar1">{{$data->pengantar1}}</textarea>
                                                 
                                             </div>
-                                        </div>
-                                    </div><br><br>
-                                     <div class="row">
+                                      <br><br>
+                                     <!-- <div class="row">
                                         
-                                        <div class="col-md-13">
+                                        <div class="col-md-13"> -->
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 2</p>
                                                 <textarea id="ckeditor2" class="contact-message" cols="30" rows="10" name="pengantar2">{{$data->pengantar2}}</textarea>
                                                 
                                             </div>
-                                        </div>
-                                    </div><br><br>
-                                    <div class="row">
-                                        
-                                        <div class="col-md-13">
+                                       <br><br>
+                                   
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 3</p>
                                                 <textarea id="ckeditor3" class="contact-message" cols="30" rows="10" name="pengantar3">{{$data->pengantar3}}</textarea>
                                                 
                                             </div>
-                                        </div>
-                                    </div><br><br>
+                                       
+                        <br><br>
                                     <div class="row">
                                         <div class="col-lg-4"></div>
                                         <div class="col-lg-8">

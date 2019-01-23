@@ -104,12 +104,12 @@
         </div>
         <!-- Header top area start-->
         <div class="content-inner-all">
-            <div class="header-top-area" style="background-color: #f47142">
-                <div class="fixed-header-top" style="background-color: #f47142">
+            <div class="header-top-area" style="background-color:#bc0101">
+                <div class="fixed-header-top" style="background-color:#bc0101">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-1 col-md-6 col-sm-6 col-xs-12">
-                                <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn" style="background-color: #f47142">
+                                <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn" style="background-color:#bc0101">
                                     <i class="fa fa-bars"></i>
                                      <div class="admin-logo logo-wrap-pro">
                                     <a href="#"><img src="img/logo/log.png" alt="" />
@@ -138,9 +138,9 @@
                                                 <span class="admin-name">{{ Auth::user()->name }}</span>
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
-                                            <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX" style="background-color:#f47142 ">
+                                            <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX" style="background-color:#bc0101 ">
                                                 <li><a href="{{route('logout')}}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
+                                                     document.getElementById('logout-form').submit();"style="background-color: #bc0101"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
                                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                      @csrf
                                                 </form>
@@ -289,6 +289,7 @@
     </script>
        <script>
         CKEDITOR.replace( 'ckeditor2' );
+        config.height = 500;
     </script>
       <script>
         CKEDITOR.replace( 'ckeditor3' );
