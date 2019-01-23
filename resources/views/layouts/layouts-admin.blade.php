@@ -65,12 +65,10 @@
         <div class="left-sidebar-pro">
             <nav id="sidebar" >
                 <div class="sidebar-header">
-                    <a href="#"><img src="{{asset('a/img/message/1.jpg')}}" alt="" />
+                    <a href="#"><img src="{{url('images/201901221613065c4741121bc1f.jpg')}}" alt="" style="width: 150px;height: 150px;" />
                     </a>
                     <h3>{{ Auth::user()->name }}</h3>
-                    <h3>Ander Son</h3>
-                    <p>Developer</p>
-                    <strong>AP+</strong>
+                    <strong>CP</strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
@@ -131,7 +129,7 @@
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                 <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                                <span class="admin-name">Advanda Cro</span>
+                                                <span class="admin-name">{{ Auth::user()->name }}</span>
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX" style="background-color:#f47142 ">
