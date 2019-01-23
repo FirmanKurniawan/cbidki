@@ -72,7 +72,7 @@
                                         <div class="col-lg-4"></div>
                                         <div class="col-lg-8">
                                             <div class="login-button-pro">
-                                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-plus"></i></button>
+                                                <button type="submit" class="login-button login-button-lg"><i class="fas fa-edit"></i></button>
                                             </div>  
                                         </div>
                                         </div>
