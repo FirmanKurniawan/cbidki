@@ -13,7 +13,6 @@
                                         <h1>Gallery<span class="table-project-n"></span></h1>
                                         <div class="sparkline13-outline-icon">
                                             <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                            <span><i class="fa fa-wrench"></i></span>
                                             <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
                                         </div>
                                     </div>

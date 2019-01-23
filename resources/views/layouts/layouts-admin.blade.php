@@ -76,11 +76,17 @@
                         <li class="nav-item"><a href="{{url('/')}}"><i class="fa fa-dashboard"></i>
                             <span class="mini-dn">Dashboard</span> <span class="indicator-right-menu"></span></a>
                         </li>
+                        <li class="nav-item"><a href="{{url('profile')}}"><i class="fa fa-user"></i>
+                            <span class="mini-dn">Profile</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('about')}}"><i class="fa fa-globe"></i>
+                            <span class="mini-dn">About</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('visimisi')}}"><i class="fa fa-envelope"></i>
+                            <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
+                        </li>
                          <li class="nav-item"><a href="{{url('gallery')}}"><i class="fa fa-image"></i>
                             <span class="mini-dn">Gallery</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                         <li class="nav-item"><a href="{{url('visimisi')}}"><i class="fa fa-envelope"></i>
-                            <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
@@ -88,10 +94,6 @@
                          <li class="nav-item"><a href="{{url('footer')}}"><i class="fa fa-font"></i>
                             <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                          <li class="nav-item"><a href="{{url('about')}}"><i class="fa fa-adn"></i>
-                            <span class="mini-dn">About</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                     
                     </ul>
                 </div>
             </nav>
@@ -133,9 +135,6 @@
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX" style="background-color:#f47142 ">
-                                             
-                                                  <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
-                                                </li>
                                                 <li><a href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"style="background-color: #f47142"><span class="adminpro-icon adminpro-locked author-log-ic" style=""></span>Log Out</a>
                                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -193,126 +192,6 @@
             <!-- Mobile Menu end -->
             <!-- Breadcome start-->
             @yield('content')
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title" id="exampleModalLabel">My Profile </h1>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form method="POST" action="{{url('profile/update/{id}')}}">
-        @csrf
-      <div class="modal-body">
-            <div class="row">
-                <?php
-                    $profile = \App\Profile::all();
-                ?>
-                @foreach ($profile as $p)
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Full Name</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-input-area">
-                                                <input type="hidden" name="id" value="{{$p->id}}">
-                                                <input type="text" name="nama" value="{{$p->nama}}" />
-                                                <i class="fa fa-user login-user" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-       
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Alamat</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-input-area">
-                                                <input type="text" name="alamat" value="{{$p->alamat}}" />
-                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Phone Number</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-input-area">
-                                                <input type="text" name="telepon" value="{{$p->telepon}}" />
-                                                <i class="fa fa-phone login-user" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Email Address</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-input-area">
-                                                <input type="email" name="email" value="{{$p->email}}" />
-                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>FansPage</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-input-area">
-                                                <input type="text" name="fanspage" value="{{$p->fanspage}}" />
-                                                <i class="fa fa-calendar login-user" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Pengantar 1</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar1">{{$p->pengantar1}}</textarea>
-                                                <i class="fa fa-comment login-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Pengantar 2</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar2">{{$p->pengantar2}}</textarea>
-                                                <i class="fa fa-comment login-user"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Pengantar 3</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar3">{{$p->pengantar3}}</textarea>
-                                                <i class="fa fa-comment login-user"></i>
-                                            </div>
-                                        </div>
- 
-                @endforeach
-                                    </div>    
- 
-              </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
 </div>
 </div>
  

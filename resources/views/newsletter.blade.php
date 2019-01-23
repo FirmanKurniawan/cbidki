@@ -11,17 +11,15 @@
                                         <h1>News<span class="table-project-n">Letter</span></h1>
                                         <div class="sparkline13-outline-icon">
                                             <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                            <span><i class="fa fa-wrench"></i></span>
                                             <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="sparkline13-graph">
                                     <div class="datatable-dashv1-list custom-datatable-overright">
-                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
+                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="false" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
                                                 <tr>
-                                                    <th data-field="state" data-checkbox="true"></th>
                                                     <th data-field="id">ID</th>
                                                     <th data-field="email" data-editable="true">Email</th>
                                                     <th data-field="action">Action</th>
@@ -30,7 +28,6 @@
                                             <tbody>
                                                 @foreach ($newsletter as $n)
                                                 <tr>
-                                                    <td></td>
                                                     <td>1</td>
                                                     <td>admin@uttara.com</td>
                                                     <td class="datatable-ct"><a href="{{url('newsletter/delete', $n->id)}}"><i class="fa fa-trash"></i></a>
