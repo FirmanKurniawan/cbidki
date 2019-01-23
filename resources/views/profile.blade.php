@@ -35,13 +35,15 @@
                                         </div>
                                       </div>
                                       <div class="form-row">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                           <label for="inputEmail4">Alamat</label>
-                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat" value="{{$p->alamat}}">
+                                          <textarea type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat" value="">{{$p->alamat}}</textarea>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
                                           <label for="inputPassword4">Telepon</label>
-                                          <input type="number" class="form-control" id="inputPassword4" placeholder="Telepon" name="telepon" value="{{$p->telepon}}">
+                                          <input type="number" class="form-control" id="inputCity" name="telepon" placeholder="Telepon" value="{{$p->telepon}}">
                                         </div>
                                       </div>
                                       <div class="form-row">
@@ -53,19 +55,19 @@
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Pengantar 1</label>
-                                          <input type="text" class="form-control" id="inputCity" name="pengantar1" placeholder="Pengantar 1" value="{{$p->pengantar1}}">
+                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="pengantar1" placeholder="Pengantar 1" value="">{{$p->pengantar1}}</textarea>
                                         </div>
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Pengantar 2</label>
-                                          <input type="text" class="form-control" id="inputCity" name="pengantar2" placeholder="Pengantar 2" value="{{$p->pengantar2}}">
+                                          <textarea id="ckeditor2" type="text" class="form-control" id="inputCity" name="pengantar2" placeholder="Pengantar 2" value="">{{$p->pengantar2}}</textarea>
                                         </div>
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Pengantar 3</label>
-                                          <input type="text" class="form-control" id="inputCity" name="pengantar3" placeholder="Pengantar 3" value="{{$p->pengantar3}}">
+                                          <textarea id="ckeditor3" type="text" class="form-control" id="inputCity" name="pengantar3" placeholder="Pengantar 3" value="">{{$p->pengantar3}}</textarea>
                                         </div>
                                       </div>
                                       <div class="form-group">
