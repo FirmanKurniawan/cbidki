@@ -53,22 +53,6 @@
                                                 <input type="password" name="password" />
                                                 <i class="fa fa-lock login-user"></i>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="forgot-password">
-                                                        <a href="#">Forgot password?</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="login-keep-me">
-                                                        <label class="checkbox">
-                                                            <input type="checkbox" name="remember" checked><i></i>Keep me logged in
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">

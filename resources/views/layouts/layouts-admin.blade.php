@@ -77,7 +77,7 @@
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                        
-                        <li class="nav-item"><a href="{{url('/')}}"><i class="fa fa-dashboard"></i>
+                        <li class="nav-item"><a href="{{url('/')}}"><i class="fa fa-tachometer-alt"></i>
                             <span class="mini-dn">Dashboard</span> <span class="indicator-right-menu"></span></a>
                         </li>
                         <li class="nav-item"><a href="{{url('profile')}}"><i class="fa fa-user"></i>
