@@ -3,9 +3,10 @@
 <!-- start banner Area -->
 			
 
-			<!-- Start contact-page Area -->
-
+			<!-- Start contact-page Area --><br><br>
 			<section class="contact-page-area section-gap">
+
+<h1 class="mb-10 header-text text-center">Contact</h1>
 				<div class="container" style="padding-top: 50px;">
 					<div class="row">
 						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>

@@ -3,7 +3,11 @@
 	
 			
 			<!-- Start home-about Area -->
+			<br><br>
 			<section class="home-about-area section-gap">
+				<div class="container-center" style="margin-left: 650px;">
+				<h1>About</h1>
+			</div><br><br>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 home-about-left">

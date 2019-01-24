@@ -3,7 +3,9 @@
 	
 			
 			<!-- Start service-page Area -->
+			<br><br>
 			<section class="service-page-area section-gap">
+				<h1 class="mb-10 header-text text-center">Service</h1>
 				<div class="container" style="padding-top: 40px;">							
 					<div class="row">
 						<div class="col-lg-4 col-md-6">

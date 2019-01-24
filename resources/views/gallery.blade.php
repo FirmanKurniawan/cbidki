@@ -2,7 +2,10 @@
 @section('content')
 
 			<!-- Start training Area -->
+			
+		<br><br>
 			<section class="training-area section-gap">
+				<h1 class="mb-10 header-text text-center">Gallery</h1>
 				<div class="container" style="padding-top: 40px;">
 					<div class="row">
               <?php
