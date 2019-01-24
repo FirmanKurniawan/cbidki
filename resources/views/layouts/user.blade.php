@@ -40,7 +40,9 @@
 			    		</div>
 			    		<div class="col-lg-4 menu-top-middle justify-content-center d-flex">
 							<a href="index.html">
-								<img class="img-fluid" src="img/logo.png" alt="">	
+								<center>
+								<img class="img-fluid" src="{{asset('cbi_user/img/CBI.png')}}" alt="" style="width: 25%;">	
+								</center>
 							</a>			    			
 			    		</div>
 			    		<div class="col-lg-4 col-sm-4 menu-top-right">
@@ -58,12 +60,12 @@
 				          <li><a href="{{url('about')}}">About</a></li>
 				          <li><a href="{{url('service')}}">Service</a></li>
 				          <li><a href="{{url('gallery')}}">Gallery</a></li>
-				          <li class="menu-has-children"><a href="">Blog</a>
+				          {{-- <li class="menu-has-children"><a href="">Blog</a>
 				            <ul>
 				              <li><a href="blog-home.html">Blog Home</a></li>
 				              <li><a href="blog-single.html">Blog Single</a></li>
 				            </ul>
-				          </li>
+				          </li> --}}
 				          <li><a href="{{url('contact')}}">Contact</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
