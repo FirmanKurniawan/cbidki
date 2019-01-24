@@ -29,8 +29,8 @@
                                                 @foreach ($newsletter as $n)
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>admin@uttara.com</td>
-                                                    <td class="datatable-ct"><a href="{{url('newsletter/delete', $n->id)}}"><i class="fa fa-trash"></i></a>
+                                                    <td>{{$n->email}}</td>
+                                                    <td class="datatable-ct"><a href="{{url('admin/newsletter/delete', $n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 @endforeach

@@ -17,7 +17,7 @@ class NewsletterController extends Controller
    {
       $newsletter = Newsletter::find($id);
       $newsletter->delete();
-      return redirect(url('admin.newsletter'));
+      return redirect(url('admin/newsletter'));
    }
 
    public function save(Request $r)
