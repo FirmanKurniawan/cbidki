@@ -23,6 +23,9 @@ class CreateProfilesTable extends Migration
             $table->string('pengantar1')->nullable();
             $table->string('pengantar2')->nullable();
             $table->string('pengantar3')->nullable();
+            $table->string('gambar_depan')->nullable();
+            $table->string('gambar_about')->nullable();
+            $table->string('gambar_bawah')->nullable();
             $table->timestamps();
         });
     }

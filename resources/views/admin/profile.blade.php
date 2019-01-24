@@ -7,7 +7,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-3"></div>
-                        <form action="{{url('profile/update/{id}')}}" method="POST" id="adminpro-order-form" class="adminpro-form">
+                        <form action="{{url('admin/profile/update/{id}')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
                             @csrf
                             <div class="col-lg-6">
                                 <div class="login-bg">
@@ -68,6 +68,24 @@
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Pengantar 3</label>
                                           <textarea id="ckeditor3" type="text" class="form-control" id="inputCity" name="pengantar3" placeholder="Pengantar 3" value="">{{$p->pengantar3}}</textarea>
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Gambar Depan</label>
+                                          <input id="ckeditor3" type="file" class="form-control" id="inputCity" name="gambar_depan">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Gambar About</label>
+                                          <input id="ckeditor3" type="file" class="form-control" id="inputCity" name="gambar_about">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Gambar Bawah</label>
+                                          <input id="ckeditor3" type="file" class="form-control" id="inputCity" name="gambar_bawah">
                                         </div>
                                       </div>
                                       <div class="form-group">
