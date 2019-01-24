@@ -1,66 +1,276 @@
-@extends('layouts.layouts-admin')
+@extends('layouts.user')
 @section('content')
-
-  <div class="data-table-area mg-b-15">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form id="adminpro-order-form" class="adminpro-form" method="POST" action="{{url('gallery/save')}}" enctype="multipart/form-data">
-                                @csrf
-                            <div class="sparkline13-list shadow-reset">
-                                <div class="sparkline13-hd">
-                                    <div class="main-sparkline13-hd">
-                                        <h1>Gallery<span class="table-project-n"></span></h1>
-                                        <div class="sparkline13-outline-icon">
-                                            <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                            <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sparkline13-graph">
-                                    <div class="datatable-dashv1-list custom-datatable-overright">
-                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="false" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
-                                            <thead>
-                                                <tr>
-                                                    <th data-field="No">No</th>
-                                                    <th data-field="gambar">Gambar</th>
-                                                    <th data-field="action">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                $i = 1;
-                                                $gallery = \App\Gallery::all();  
-                                                ?>
-                                                @foreach ($gallery as $n)
-                                                <tr>
-                                                    <td>{{$i++}}</td>
-                                                    <td><img src="{{ url('images/'.$n->gambar) }}" style="width: 70px; height: 70px"></td>
-                                                    <td class="datatable-ct"><a href="{{url('gallery/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="login-input-area">
-                                <input name="gambar[]" type="file" multiple="true">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
-                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </form>
-            </div>
+<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Training Programs			
+							</h1>	
+							<p class="text-white link-nav"><a href="{{url('index')}}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{url('gallery')}}"> Training Programs</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+			
+			<!-- Start training Area -->
+			<section class="training-area section-gap">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-9 pb-40 header-text text-center">
+							<h1 class="pb-10">Our Offered Training Programs</h1>
+							<p>
+								Who are in extremely love with eco friendly system.
+							</p>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr1.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr2.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr3.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr4.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr5.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 cl-md-6">
+							<div class="single-training">
+								<div class="thumb relative">
+									<div class="overlay-bg"></div>
+									<img class="img-fluid" src="{{asset('cbi_user/img/pages/tr6.jpg')}}" alt="">
+									<a class="admission-btn" href="#">Admission Going on</a>	
+								</div>
+								<div class="details">
+									<div class="title justify-content-between d-flex">
+										<a href="#"><h4>Bsc in Film & Media</h4></a>
+										<p class="price">
+											$2500
+										</p>
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+									</p>
+								</div>
+							</div>
+						</div>																		
+					</div>
+				</div>	
+			</section>
+			<!-- End training Area -->
+									
+			
+			<!-- Start booking Area -->
+			<section class="booking-area section-gap relative" id="consultancy">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-6 col-md-6 booking-left">
+							<div class="active-review-carusel">
+								<div class="single-carusel">
+									<img src="{{asset('cbi_user/img/r1.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Fannie Rowe</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>
+									<img src="{{asset('cbi_user/img/r2.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Hulda Sutton</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>									
+								</div>
+								<div class="single-carusel">
+									<img src="{{asset('cbi_user/img/r1.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Fannie Rowe</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>
+									<img src="{{asset('cbi_user/img/r2.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Hulda Sutton</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>									
+								</div>
+								<div class="single-carusel">
+									<img src="{{asset('cbi_user/img/r1.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Fannie Rowe</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>
+									<img src="{{asset('cbi_user/img/r2.png')}}" alt="">
+									<div class="title justify-content-start d-flex">
+										<h4>Hulda Sutton</h4>
+										<div class="star">
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>
+									<p>
+										Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									</p>									
+								</div>																
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 booking-right">
+								<h4 class="mb-20">Appointment Form</h4>
+								<form action="#">
+									<input class="form-control" type="text" name="name" placeholder="Your name" required>
+									<input class="form-control" type="email" name="email" placeholder="Email Address" required>
+									<input class="form-control" type="text" name="phone" placeholder="Phone Number" required>
+									<div class="input-group dates-wrap">                                          
+										<input id="datepicker" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
+										<div class="input-group-prepend">
+											<span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+										</div>											
+									</div>
+									<textarea class="common-textarea form-control mt-10" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
+									<button  class="btn btn-default btn-lg btn-block text-center">Book Now!</button>
+								</form>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End booking Area -->
 @endsection

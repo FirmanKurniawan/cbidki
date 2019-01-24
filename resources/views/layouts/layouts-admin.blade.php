@@ -77,25 +77,25 @@
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                        
-                        <li class="nav-item"><a href="{{url('/')}}"><i class="fa fa-tachometer-alt"></i>
+                        <li class="nav-item"><a href="{{url('/admin')}}"><i class="fa fa-tachometer-alt"></i>
                             <span class="mini-dn">Dashboard</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('profile')}}"><i class="fa fa-user"></i>
+                        <li class="nav-item"><a href="{{url('/admin/profile')}}"><i class="fa fa-user"></i>
                             <span class="mini-dn">Profile</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('about')}}"><i class="fa fa-globe"></i>
+                        <li class="nav-item"><a href="{{url('/admin/about')}}"><i class="fa fa-globe"></i>
                             <span class="mini-dn">About</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('visimisi')}}"><i class="fa fa-envelope"></i>
+                        <li class="nav-item"><a href="{{url('/admin/visimisi')}}"><i class="fa fa-envelope"></i>
                             <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                         <li class="nav-item"><a href="{{url('gallery')}}"><i class="fa fa-image"></i>
+                         <li class="nav-item"><a href="{{url('/admin/gallery')}}"><i class="fa fa-image"></i>
                             <span class="mini-dn">Gallery</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                         <li class="nav-item"><a href="{{url('newsletter')}}"><i class="fa fa-envelope-square"></i>
+                         <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                         <li class="nav-item"><a href="{{url('footer')}}"><i class="fa fa-font"></i>
+                         <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
                             <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
                         </li>
                     </ul>

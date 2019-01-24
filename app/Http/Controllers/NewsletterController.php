@@ -10,14 +10,14 @@ class NewsletterController extends Controller
     public function index()
    {
       $newsletter = Newsletter::all();
-   	return view('newsletter')->with('newsletter', $newsletter);
+   	return view('admin.newsletter')->with('newsletter', $newsletter);
    }
 
    public function delete($id)
    {
       $newsletter = Newsletter::find($id);
       $newsletter->delete();
-      return redirect(url('newsletter'));
+      return redirect(url('admin.newsletter'));
    }
 
    public function save(Request $r)

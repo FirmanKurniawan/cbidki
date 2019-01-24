@@ -10,7 +10,7 @@ class FooterController extends Controller
     public function index()
     {
         $data = \App\Footer::where('id',1)->first();
-        return view('footer')->with('data',$data);
+        return view('admin.footer')->with('data',$data);
     }
 
     public function update(Request $r)
@@ -20,6 +20,6 @@ class FooterController extends Controller
         $data->pengantar2 = $r->pengantar2;
         $data->pengantar3 = $r->pengantar3;
         $data->save();
-        return redirect(url('footer'));
+        return redirect(url('admin.footer'));
     }
 }

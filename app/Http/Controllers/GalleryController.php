@@ -11,12 +11,12 @@ class GalleryController extends Controller
 {
 	public function indexgallery()
 	{
-		return view('gallery');
+		return view('admin.gallery');
 	}
 
     public function addgallery()
     {
-    	return view('gallery.add');
+    	return view('admin.gallery.add');
     }
 
     public function savegallery(Request $r)
@@ -33,13 +33,13 @@ class GalleryController extends Controller
           ]);
     }  
     }
-    	return redirect(url('gallery'));
+    	return redirect(url('admin.gallery'));
     }
 
     public function deletegallery($id)
     {
     	$gambar = Gallery::find($id);
     	$gambar->delete();
-    	return redirect(url('gallery'));
+    	return redirect(url('admin.gallery'));
     }
 }

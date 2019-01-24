@@ -20,43 +20,43 @@ Route::get('/images/{filename}', function ($filename)
     return $response;
 });
  
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/admin', function () {
+    return view('admin.welcome');
 });
  
-Route::get('gallery', function(){
-    return view('gallery');
+Route::get('/admin/gallery', function(){
+    return view('admin.gallery');
 });
-Route::get('visimisi', function(){
-    return view('visimisi');
+Route::get('/admin/visimisi', function(){
+    return view('admin.visimisi');
 });
-Route::get('newsletter', function(){
-    return view('newsletter');
+Route::get('/admin/newsletter', function(){
+    return view('admin.newsletter');
 });
-Route::get('footer',function(){
-    return view('footer');
+Route::get('/admin/footer',function(){
+    return view('admin.footer');
 });
-Route::get('about',function(){
-    return view('about');
+Route::get('/admin/about',function(){
+    return view('admin.about');
 });
 
 //NEWSLETTER
-Route::get('/newsletter', 'NewsletterController@index');
-Route::get('/newsletter/delete/{id}', 'NewsletterController@delete');
-Route::post('/newsletter/save', 'NewsletterController@save');
+Route::get('/admin/newsletter', 'NewsletterController@index');
+Route::get('/admin/newsletter/delete/{id}', 'NewsletterController@delete');
+Route::post('/admin/newsletter/save', 'NewsletterController@save');
  
 //PROFILE
-Route::get('/profile', 'ProfileController@all');
-Route::post('/profile/update/{id}', 'ProfileController@update');
+Route::get('/admin/profile', 'ProfileController@all');
+Route::post('/admin/profile/update/{id}', 'ProfileController@update');
  
-Route::post('footer/update', 'FooterController@update');
-Route::post('about/update', 'AboutController@update');
+Route::post('/admin/footer/update', 'FooterController@update');
+Route::post('/admin/about/update', 'AboutController@update');
  
 Auth::routes();
  
-Route::get('/', 'HomeController@welcome');
+Route::get('/admin', 'HomeController@welcome');
  
-Route::prefix('admin')->group(function(){
+Route::prefix('admin111')->group(function(){
     Route::get('/', 'VisimisiController@indexvisimisi');
     Route::get('/misi/add', 'VisimisiController@addmisi');
     Route::post('/misi/save', 'VisimisiController@savemisi');
@@ -78,4 +78,21 @@ Route::group(['prefix' => 'gallery'] , function(){
 });
 
 
-Route::post('/visimisi/update', 'VisimisiController@visimisi_update');
+Route::post('/admin/visimisi/update', 'VisimisiController@visimisi_update');
+
+
+Route::get('/', function() {
+    return view('index');
+});
+Route::get('/about', function() {
+    return view('about');
+});
+Route::get('/contact', function() {
+    return view('contact');
+});
+Route::get('/service', function() {
+    return view('service');
+});
+Route::get('/gallery', function() {
+    return view('gallery');
+});

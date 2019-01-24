@@ -9,7 +9,7 @@ class ProfileController extends Controller
     public function all()
     {
     	$profile = Profile::where('id', 1)->first();
-    	return view('profile', compact('profile'));
+    	return view('admin.profile', compact('profile'));
     }
 
     public function update(Request $r)
@@ -35,6 +35,6 @@ class ProfileController extends Controller
     	$profile->pengantar3 = $pengantar3;
     	$profile->save();
 
-    	return redirect(url('/profile'));
+    	return redirect(url('/admin/profile'));
     }
 }

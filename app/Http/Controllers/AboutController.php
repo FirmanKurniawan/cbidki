@@ -9,7 +9,7 @@ class AboutController extends Controller
 {
     public function index(){
     	$data = \App\About::where('id',1)->first();
-    	return view('about')->with('data',$data);
+    	return view('admin.about')->with('data',$data);
     }
 
     public function update(Request $r){
@@ -18,6 +18,6 @@ class AboutController extends Controller
     	$data->pengantar2 = $r->pengantar2;
     	$data->pengantar3 = $r->pengantar3;
     	$data->save();
-    	return redirect('about');
+    	return redirect('admin.about');
     }
 }
