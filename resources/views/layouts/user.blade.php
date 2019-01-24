@@ -39,7 +39,7 @@
 			    			<a class="tel" href="mailto:info@horseclub.com">info@horseclub.com</a>
 			    		</div>
 			    		<div class="col-lg-4 menu-top-middle justify-content-center d-flex">
-							<a href="index.html">
+							<a href="{{url('/')}}">
 								<center>
 								<img class="img-fluid" src="{{asset('cbi_user/img/CBI.png')}}" alt="" style="width: 25%;">	
 								</center>
@@ -56,7 +56,7 @@
 			    	<div class="row align-items-center justify-content-center d-flex">
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Home</a></li>
+				          <li class="menu-active"><a href="{{url('/')}}">Home</a></li>
 				          <li><a href="{{url('about')}}">About</a></li>
 				          <li><a href="{{url('service')}}">Service</a></li>
 				          <li><a href="{{url('gallery')}}">Gallery</a></li>
