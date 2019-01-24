@@ -6,7 +6,8 @@
 	$q = \App\Profile::where('id', 1)->first();
 
 ?>
-			<section class="banner-area relative" id="home">	
+			<section class="banner-area relative" id="home" style="background: url(images/{{$q->gambar_depan}}) center;
+  background-size: cover;">	
 				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="row fullscreen d-flex align-items-center justify-content-start">
@@ -15,8 +16,8 @@
 							<span class="bar"></span>
 							<h1 class="text-white">
 								{!! $q->pengantar2 !!}<br>
-								<h2 class="text-white">{!! $q->pengantar3 !!}</h2>
-							</h1><br>
+								{!! $q->pengantar3 !!}
+							</h1>
 							<a href="#" class="genric-btn">Book Consultancy</a>
 						</div>
 					</div>
@@ -43,7 +44,7 @@
 							<a class="primary-btn" href="#">Get Started Now</a>
 						</div>
 						<div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex">
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('cbi_user/img/play.png')}}" alt=""></a>
+							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('images/'.$q->gambar_about)}}" alt=""></a>
 						</div>
 					</div>
 				</div>	

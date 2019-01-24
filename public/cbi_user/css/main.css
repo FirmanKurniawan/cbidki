@@ -2389,10 +2389,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: 0;
 }
 
-.banner-area {
+/*.banner-area {
   background: url(../img/header-bg.jpg) center;
   background-size: cover;
-}
+}*/
 
 @media (max-width: 767.98px) {
   .banner-area .fullscreen {
@@ -2529,9 +2529,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-video-right {
-  background: url(../img/video-bg.jpg) no-repeat center;
-  background-size: cover;
-  height: 330px;
+  /*background: url(../img/video-bg.jpg) no-repeat center;*/
+ /* background-size: cover;
+  height: 330px;*/
 }
 
 .about-video-right .overlay-bg {

@@ -25,9 +25,13 @@
 				</div>	
 			</section>
 			<!-- End home-about Area -->
+<?php
+	$q = \App\Profile::where('id', 1)->first();
 
+?>
 			<!-- Start feature Area -->
-			<section class="feature-area relative pt-100 pb-20">
+			<section class="feature-area relative pt-100 pb-20" style="background: url(images/{{$q->gambar_bawah}}) center;
+  background-size: cover;">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row align-items-center justify-content-center">
