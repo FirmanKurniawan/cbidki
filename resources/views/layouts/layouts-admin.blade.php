@@ -28,6 +28,7 @@
     <!-- mCustomScrollbar CSS
         ============================================ -->
     <link rel="stylesheet" href="{{asset('a/css/jquery.mCustomScrollbar.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('a/css/form/all-type-forms.css')}}">
     <!-- animate CSS
         ============================================ -->
     <link rel="stylesheet" href="{{asset('a/css/animate.css')}}">
@@ -89,8 +90,11 @@
                         <li class="nav-item"><a href="{{url('/admin/visimisi')}}"><i class="fa fa-envelope"></i>
                             <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                         <li class="nav-item"><a href="{{url('/admin/gallery')}}"><i class="fa fa-image"></i>
+                        <li class="nav-item"><a href="{{url('admin/gallery2')}}"><i class="fa fa-image"></i>
                             <span class="mini-dn">Gallery</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                         <li class="nav-item"><a href="{{url('/admin/gallery')}}"><i class="fab fa-gg-circle"></i>
+                            <span class="mini-dn">Multimedia</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
@@ -170,6 +174,9 @@
                         </li>
                          <li class="nav-item"><a href="{{url('gallery')}}"><i class="fa fa-image"></i>
                             <span class="mini-dn">Gallery</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('gallery2')}}"><i class="fa fa-image"></i>
+                            <span class="mini-dn">Gallery2</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('visimisi')}}"><i class="fa fa-envelope"></i>
                             <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
