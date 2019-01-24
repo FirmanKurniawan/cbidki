@@ -34,9 +34,13 @@
 			  <header id="header" id="home">
 			    <div class="container">
 			    	<div class="row header-top align-items-center">
+			    		<?php
+							$q = \App\Profile::where('id', 1)->first();
+
+							?>
 			    		<div class="col-lg-4 col-sm-4 menu-top-left">
 			    			<a href="mailto:info@horseclub.com"><span class="lnr lnr-location"></span></a>
-			    			<a class="tel" href="mailto:info@horseclub.com">info@horseclub.com</a>
+			    			<a class="tel" href="mailto:info@horseclub.com">{{$q->email}}m</a>
 			    		</div>
 			    		<div class="col-lg-4 menu-top-middle justify-content-center d-flex">
 							<a href="{{url('/')}}">
@@ -46,7 +50,7 @@
 							</a>			    			
 			    		</div>
 			    		<div class="col-lg-4 col-sm-4 menu-top-right">
-			    			<a class="tel" href="tel:+880 123 12 658 439">+880 123 12 658 439</a>
+			    			<a class="tel" href="tel:+880 123 12 658 439">{{$q->telepon}}</a>
 			    			<a href="tel:+880 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
 			    		</div>
 			    	</div>

@@ -1,16 +1,21 @@
 @extends('layouts.user')
 @section('content')
 <!-- start banner Area -->
+
+<?php
+	$q = \App\Profile::where('id', 1)->first();
+
+?>
 			<section class="banner-area relative" id="home">	
 				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="row fullscreen d-flex align-items-center justify-content-start">
 						<div class="banner-content col-lg-12">
-							<h6>Introducing Horse Club</h6>
+							<h6>{!! $q->pengantar1 !!}</h6>
 							<span class="bar"></span>
 							<h1 class="text-white">
-								Inter relation <br>
-								Between Horse & Rider
+								{!! $q->pengantar2 !!}<br>
+								{!! $q->pengantar3 !!}
 							</h1>
 							<a href="#" class="genric-btn">Book Consultancy</a>
 						</div>
