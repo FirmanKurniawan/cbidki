@@ -1,6 +1,9 @@
 @extends('layouts.user')
 @section('content')
-	
+	<?php
+				$q = \App\Profile::where('id', 1)->first();
+
+			?>
 			
 			<!-- Start home-about Area -->
 			<br><br>
@@ -11,7 +14,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 home-about-left">
-							<img class="mx-auto d-block img-fluid" src="{{asset('cbi_user/img/about-img.png')}}" alt="">
+							<img class="mx-auto d-block img-fluid" src="{{asset('images/'.$q->gambar_about)}}" alt="">
 						</div>
 						<div class="col-lg-6 home-about-right">
 							<h6 class="text-uppercase">Brand new app to blow your mind</h6>
@@ -29,10 +32,7 @@
 				</div>	
 			</section>
 			<!-- End home-about Area -->
-<?php
-	$q = \App\Profile::where('id', 1)->first();
-
-?>
+			
 			<!-- Start feature Area -->
 			<section class="feature-area relative pt-100 pb-20" style="background: url(images/{{$q->gambar_bawah}}) center;
   background-size: cover;">
@@ -111,7 +111,7 @@
 							<a class="primary-btn" href="#">Get Started Now</a>
 						</div>
 						<div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex">
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('cbi_user/img/play.png')}}" alt=""></a>
+							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('images/'.$q->gambar_about)}}" alt=""></a>
 						</div>
 					</div>
 				</div>	
