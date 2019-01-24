@@ -1,20 +1,6 @@
 @extends('layouts.user')
 @section('content')
-<!-- start banner Area -->
-			<section class="banner-area relative" id="home">	
-				<div class="overlay overlay-bg"></div>
-				<div class="container">				
-					<div class="row d-flex align-items-center justify-content-center">
-						<div class="about-content col-lg-12">
-							<h1 class="text-white">
-								About Us				
-							</h1>	
-							<p class="text-white link-nav"><a href="{{url('index')}}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{url('about')}}"> About Us</a></p>
-						</div>	
-					</div>
-				</div>
-			</section>
-			<!-- End banner Area -->	
+	
 			
 			<!-- Start home-about Area -->
 			<section class="home-about-area section-gap">

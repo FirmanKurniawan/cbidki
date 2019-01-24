@@ -1,24 +1,12 @@
 @extends('layouts.user')
 @section('content')
 <!-- start banner Area -->
-			<section class="banner-area relative" id="home">	
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row d-flex align-items-center justify-content-center">
-						<div class="about-content col-lg-12">
-							<h1 class="text-white">
-								Contact Us
-							</h1>	
-							<p class="text-white link-nav"><a href="{{url('index')}}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{{url('contact')}}"> Contact Us</a></p>
-						</div>											
-					</div>
-				</div>
-			</section>
-			<!-- End banner Area -->	
+			
 
 			<!-- Start contact-page Area -->
+
 			<section class="contact-page-area section-gap">
-				<div class="container">
+				<div class="container" style="padding-top: 50px;">
 					<div class="row">
 						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
 						<div class="col-lg-4 d-flex flex-column address-wrap">
