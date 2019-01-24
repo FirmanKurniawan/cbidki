@@ -15,8 +15,8 @@
 							<span class="bar"></span>
 							<h1 class="text-white">
 								{!! $q->pengantar2 !!}<br>
-								{!! $q->pengantar3 !!}
-							</h1>
+								<h2 class="text-white">{!! $q->pengantar3 !!}</h2>
+							</h1><br>
 							<a href="#" class="genric-btn">Book Consultancy</a>
 						</div>
 					</div>

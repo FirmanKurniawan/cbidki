@@ -27,6 +27,9 @@ Route::get('/admin', function () {
 Route::get('/admin/gallery', function(){
     return view('admin.gallery');
 });
+Route::get('/admin/gallery2', function(){
+    return view('admin.gallery2');
+});
 Route::get('/admin/visimisi', function(){
     return view('admin.visimisi');
 });
@@ -75,6 +78,11 @@ Route::group(['prefix' => 'gallery'] , function(){
     Route::get('/add', 'GalleryController@addgallery');
     Route::post('/save', 'GalleryController@savegallery');
     Route::get('/delete/{id}', 'GalleryController@deletegallery');
+});
+Route::group(['prefix' => 'gallery2'] , function(){
+    Route::get('/', 'GalleryController@indexgallery2');
+    Route::post('/save', 'GalleryController@savegallery2');
+    Route::get('/delete/{id}', 'GalleryController@deletegallery2');
 });
 
 
