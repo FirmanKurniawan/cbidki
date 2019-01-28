@@ -48,6 +48,7 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="login-input-area">
+                                <br>
                                 <input name="gambar[]" type="file" multiple="true">
                             </div>
                         </div>
@@ -56,6 +57,7 @@
                         <div class="col-lg-4">
                         <div class="col-lg-8">
                             <div class="login-button-pro">
+                                <br>
                                 <button type="submit" class="login-button login-button-lg"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>

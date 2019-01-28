@@ -3,13 +3,13 @@
 
             <!-- Breadcome End-->
             <!-- Order Form Start-->
-            <div class="login-form-area mg-t-30 mg-b-15">
+            <div class="login-form">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-3"></div>
+                        
                         <form action="{{url('visimisi/update')}}" method="POST" class="adminpro-form">
                             @csrf
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="login-bg">
                                     <div class="row">
                                         <div class="col-lg-12">
