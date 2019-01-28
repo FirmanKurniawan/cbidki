@@ -99,10 +99,16 @@
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                         <li class="nav-item"><a href="{{url('/admin/merchandise')}}"><i class="fa fa-shopping-bag"></i>
+                        <li class="nav-item"><a href="{{url('/admin/korwil')}}"><i class="fa fa-road"></i>
+                            <span class="mini-dn">Korwil</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('/admin/korwil2')}}"><i class="fa fa-"></i>
+                            <span class="mini-dn">Korwil Member</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('/admin/merchandise')}}"><i class="fa fa-"></i>
                             <span class="mini-dn">Merchandise</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-book"></i>
+                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-"></i>
                             <span class="mini-dn">History</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
@@ -189,6 +195,9 @@
                         </li>
                          <li class="nav-item"><a href="{{url('newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('korwil')}}"><i class="fa fa-road"></i>
+                            <span class="mini-dn">Korwil</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('footer')}}"><i class="fa fa-font"></i>
                             <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>

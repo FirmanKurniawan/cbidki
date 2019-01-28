@@ -23,7 +23,13 @@ Route::get('/images/{filename}', function ($filename)
 Route::get('/admin', function () {
     return view('admin.welcome');
 });
- 
+
+Route::get('/admin/korwil', function(){
+    return view('admin.Fkorwil.korwil');
+});
+Route::get('/admin/korwil2', function(){
+    return view('admin.Fkorwilmember.korwilmember');
+});
 Route::get('/admin/gallery', function(){
     return view('admin.gallery');
 });
@@ -51,6 +57,9 @@ Route::get('/admin/merchandise/add',function(){
 Route::get('/admin/merchandise/edi/{id}',function(){
     return view('admin.merchandise.edit');
 });
+Route::get('/admin/history',function(){
+    return view('admin.history');
+});
 
 
 //Merchandise
@@ -69,6 +78,10 @@ Route::post('/admin/newsletter/save', 'NewsletterController@save');
 //PROFILE
 Route::get('/admin/profile', 'ProfileController@all');
 Route::post('/admin/profile/update/{id}', 'ProfileController@update');
+
+Route::post('/admin/footer/update', 'FooterController@update');
+Route::post('/admin/about/update', 'AboutController@update');
+Route::post('/admin/history/update', 'HistoryController@update');
  
 Route::post('/admin/footer/update', 'FooterController@update');
 Route::post('/admin/about/update', 'AboutController@update');
@@ -101,6 +114,20 @@ Route::group(['prefix' => 'gallery2'] , function(){
     Route::get('/', 'GalleryController@indexgallery2');
     Route::post('/save', 'GalleryController@savegallery2');
     Route::get('/delete/{id}', 'GalleryController@deletegallery2');
+});
+Route::group(['prefix' => 'korwil'] , function(){
+    Route::get('/', 'KorwilController@indexkorwil');
+    Route::post('/save', 'KorwilController@savekorwil');
+    Route::get('/edit/{id}', 'KorwilController@editkorwil');
+    Route::post('update', 'KorwilController@upatekorwil');
+    Route::get('/delete/{id}', 'KorwilController@deletekorwil');
+});
+Route::group(['prefix' => 'korwil2'] , function(){
+    Route::get('/', 'KorwilController@indexkorwilmember');
+    Route::post('/save', 'KorwilController@savekorwilmember');
+    Route::get('/edit/{id}', 'KorwilController@editkorwilmember');
+    Route::post('update', 'KorwilController@upatekorwilmember');
+    Route::get('/delete/{id}', 'KorwilController@deletekorwilmember');
 });
 
 

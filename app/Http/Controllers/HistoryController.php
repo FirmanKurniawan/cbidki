@@ -18,6 +18,6 @@ class HistoryController extends Controller
     	$data = History::find(1);
     	$data->history = $r->history;
     	$data->save();
-    	return redirect(url('/admin/history'));
+    	return redirect(url('admin/history'));
     }
 }
