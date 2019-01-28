@@ -20,7 +20,10 @@ class ProfileSeeder extends Seeder
             'fanspage' => 'nothing',
             'pengantar1' => 'pengantar1',
             'pengantar2' => 'pengantar2',
-            'pengantar3' => 'pengantar3'
+            'pengantar3' => 'pengantar3',
+            'gambar_depan' => 'no-image.png',
+            'gambar_about' => 'no-image.png',
+            'gambar_bawah' => 'no-image.png'
         ]);
     }
 }
