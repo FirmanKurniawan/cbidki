@@ -77,10 +77,16 @@ Route::post('/admin/newsletter/save', 'NewsletterController@save');
     Route::get('/admin/member/edit/{id}', 'MemberController@edit');
     Route::post('/admin/member/update', 'MemberController@update');
     Route::get('/admin/member/delete/{id}', 'MemberController@delete');
-<<<<<<< HEAD
-=======
 
->>>>>>> 1fbce41963f849ae21c65a04506c6a9bb9a8ab89
+    //User
+    Route::get('/admin/user', 'UserController@index');
+    Route::get('/admin/user/add', 'UserController@add');
+    Route::post('/admin/user/save', 'UserController@save');
+    Route::get('/admin/user/edit/{id}', 'UserController@edit');
+    Route::post('/admin/user/update', 'UserController@update');
+    Route::get('/admin/user/delete/{id}', 'UserController@delete');
+    Route::get('/ubah-password','UserController@index');
+    Route::post('/ubah-password','UserController@update');
 //Berita
     Route::get('/admin/berita', 'BeritaController@index');
     Route::get('/admin/berita/add', 'BeritaController@add');
