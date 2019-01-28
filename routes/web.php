@@ -74,6 +74,14 @@ Route::get('/admin/history',function(){
 Route::get('/admin/newsletter', 'NewsletterController@index');
 Route::get('/admin/newsletter/delete/{id}', 'NewsletterController@delete');
 Route::post('/admin/newsletter/save', 'NewsletterController@save');
+
+//Member
+    Route::get('/admin/member', 'MemberController@index');
+    Route::get('/admin/member/add', 'MemberController@add');
+    Route::post('/admin/member/save', 'MemberController@save');
+    Route::get('/admin/member/edit/{id}', 'MemberController@edit');
+    Route::post('/admin/member/update', 'MemberController@update');
+    Route::get('/admin/member/delete/{id}', 'MemberController@delete');
  
 //PROFILE
 Route::get('/admin/profile', 'ProfileController@all');

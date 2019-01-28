@@ -18,7 +18,7 @@ class CreateMembersTable extends Migration
             $table->string('nama');
             $table->text('alamat');
             $table->integer('no_identitas');
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

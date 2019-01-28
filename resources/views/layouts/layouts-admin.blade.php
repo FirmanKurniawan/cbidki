@@ -73,9 +73,23 @@
                     <a href="#"><img src="{{url('images/201901221613065c4741121bc1f.jpg')}}" alt="" style="width: 150px;height: 150px;" />
                     </a>
                     <h3>{{ Auth::user()->name }}</h3>
-                    <strong>CP</strong>
+                    <strong>CBI DKI</strong>
                 </div>
-                <div class="left-custom-menu-adp-wrap">
+                <style type="text/css">
+                    .scroll{
+  overflow: scroll;
+  height: 440px;
+  
+  /*script tambahan khusus untuk IE */
+  scrollbar-shadow-color: #FFFFFF; 
+  scrollbar-highlight-color: #6F4709; 
+  scrollbar-3dlight-color: #11111; 
+  scrollbar-darkshadow-color: #6F4709; 
+  scrollbar-track-color: #FFE8C1; 
+  scrollbar-arrow-color: #6F4709;
+}
+                </style>
+                <div class="left-custom-menu-adp-wrap scroll">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                        
                         <li class="nav-item"><a href="{{url('/admin')}}"><i class="fa fa-tachometer-alt"></i>
@@ -99,16 +113,19 @@
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
+                         <li class="nav-item"><a href="{{url('/admin/member')}}"><i class="fa fa-users"></i>
+                            <span class="mini-dn">Member</span> <span class="indicator-right-menu"></span></a>
+                        </li>
                         <li class="nav-item"><a href="{{url('/admin/korwil')}}"><i class="fa fa-road"></i>
                             <span class="mini-dn">Korwil</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/korwil2')}}"><i class="fa fa-"></i>
+                        <li class="nav-item"><a href="{{url('/admin/korwil2')}}"><i class="fa fa-user-shield"></i>
                             <span class="mini-dn">Korwil Member</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/merchandise')}}"><i class="fa fa-"></i>
+                        <li class="nav-item"><a href="{{url('/admin/merchandise')}}"><i class="fa fa-shopping-bag"></i>
                             <span class="mini-dn">Merchandise</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-"></i>
+                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-history"></i>
                             <span class="mini-dn">History</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>

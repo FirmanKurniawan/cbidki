@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Member;
 
 class MemberController extends Controller
 {
     public function index(){
-    	return view('admin.member');
+    	return view('admin.member.index');
     }
 
     public function add(){
-    	return view('admin.add');
+    	return view('admin.member.add');
     }
 
     public function save(Request $r){
@@ -33,7 +34,7 @@ class MemberController extends Controller
 	public function edit($id)
 	{
 		$m = Member::find($id);
-		return view('admin.edit')->with('m', $m);
+		return view('admin.member.edit')->with('m', $m);
 	}
 
 	public function update(Request $r)
