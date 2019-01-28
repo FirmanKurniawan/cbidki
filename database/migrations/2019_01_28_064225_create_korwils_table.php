@@ -15,6 +15,9 @@ class CreateKorwilsTable extends Migration
     {
         Schema::create('korwils', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nama');
+            $table->string('keterangan');
+            $table->string('logo');
             $table->timestamps();
         });
     }

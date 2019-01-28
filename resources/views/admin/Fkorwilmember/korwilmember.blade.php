@@ -26,7 +26,7 @@
                                                     <th data-field="nama">Nama</th>
                                                     <th data-field="kode">Kode</th>
                                                     <th data-field="logo">Logo</th>
-                                                    <th data-field="action">Action</th>
+                                                    <th colspan="2">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -40,7 +40,8 @@
                                                     <td>{{$n->nama}}</td>
                                                     <td>{{$n->kode}}</td>
                                                     <td><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
-                                                    <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a><hr><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
+                                                    <td><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a></td>
+                                                    <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 @endforeach
