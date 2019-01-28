@@ -66,7 +66,7 @@
 				        <ul class="nav-menu">
 				          <li><a href="{{url('/')}}">Home</a></li>
 				          <li><a href="{{url('about')}}">About</a></li>
-				          <li><a href="{{url('service')}}">Service</a></li>
+				          <li><a href="{{url('member')}}">Member</a></li>
 				          <li><a href="{{url('merchandise')}}">Merchandise</a></li>
 				          {{-- <li class="menu-has-children"><a href="">Blog</a>
 				            <ul>

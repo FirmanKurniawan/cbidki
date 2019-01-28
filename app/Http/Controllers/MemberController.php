@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Member;
+use DB;
 
 class MemberController extends Controller
 {
@@ -59,4 +60,13 @@ class MemberController extends Controller
 		$m->delete();
 		return redirect(url('/admin/member'));
 	}
+
+    public function search(Request $request)
+{
+    $search = $request->search;
+
+    $member = Member::all()->where('nama', 'like', '%'.$search.'%');
+
+    return view('member', compact('member'));
+}
 }

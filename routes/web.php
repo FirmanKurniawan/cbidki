@@ -158,9 +158,10 @@ Route::get('/about', function() {
 Route::get('/contact', function() {
     return view('contact');
 });
-Route::get('/service', function() {
-    return view('service');
+Route::get('/member', function() {
+    return view('member');
 });
 Route::get('/merchandise', function() {
     return view('merchandise');
 });
+Route::get('member/search', 'MemberController@search');
