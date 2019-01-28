@@ -23,7 +23,6 @@ Route::get('/images/{filename}', function ($filename)
 Route::get('/admin', function () {
     return view('admin.welcome');
 });
-
 Route::get('/admin/korwil', function(){
     return view('admin.Fkorwil.korwil');
 });
@@ -60,8 +59,6 @@ Route::get('/admin/merchandise/edi/{id}',function(){
 Route::get('/admin/history',function(){
     return view('admin.history');
 });
-
-
 //Merchandise
     Route::get('/merchandise', 'MerchandiseController@indexmerchandise');
     Route::get('/merchandise/add', 'MerchandiseController@addmerchandise');
@@ -69,12 +66,10 @@ Route::get('/admin/history',function(){
     Route::get('/admin/merchandise/edit/{id}', 'MerchandiseController@editmerchandise');
     Route::post('/admin/merchandise/update', 'MerchandiseController@updatemerchandise');
     Route::get('/merchandise/delete/{id}', 'MerchandiseController@deletemerchandise');
-
 //NEWSLETTER
 Route::get('/admin/newsletter', 'NewsletterController@index');
 Route::get('/admin/newsletter/delete/{id}', 'NewsletterController@delete');
 Route::post('/admin/newsletter/save', 'NewsletterController@save');
-
 //Member
     Route::get('/admin/member', 'MemberController@index');
     Route::get('/admin/member/add', 'MemberController@add');
@@ -82,11 +77,17 @@ Route::post('/admin/newsletter/save', 'NewsletterController@save');
     Route::get('/admin/member/edit/{id}', 'MemberController@edit');
     Route::post('/admin/member/update', 'MemberController@update');
     Route::get('/admin/member/delete/{id}', 'MemberController@delete');
+//Berita
+    Route::get('/admin/berita', 'BeritaController@index');
+    Route::get('/admin/berita/add', 'BeritaController@add');
+    Route::post('/admin/berita/save', 'BeritaController@save');
+    Route::get('/admin/berita/edit/{id}', 'BeritaController@edit');
+    Route::post('/admin/berita/update', 'BeritaController@update');
+    Route::get('/admin/berita/delete/{id}', 'BeritaController@delete');
  
 //PROFILE
 Route::get('/admin/profile', 'ProfileController@all');
 Route::post('/admin/profile/update/{id}', 'ProfileController@update');
-
 Route::post('/admin/footer/update', 'FooterController@update');
 Route::post('/admin/about/update', 'AboutController@update');
 Route::post('/admin/history/update', 'HistoryController@update');
@@ -137,11 +138,7 @@ Route::group(['prefix' => 'korwil2'] , function(){
     Route::post('update', 'KorwilController@upatekorwilmember');
     Route::get('/delete/{id}', 'KorwilController@deletekorwilmember');
 });
-
-
 Route::post('/admin/visimisi/update', 'VisimisiController@visimisi_update');
-
-
 Route::get('/', function() {
     return view('index');
 });
