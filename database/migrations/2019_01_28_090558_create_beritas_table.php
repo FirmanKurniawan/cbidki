@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKorwilsTable extends Migration
+class CreateBeritasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateKorwilsTable extends Migration
      */
     public function up()
     {
-        Schema::create('korwils', function (Blueprint $table) {
+        Schema::create('beritas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('keterangan');
-            $table->string('logo');
+            $table->string('judul');
+            $table->string('tanggal');
+            $table->text('isi');
+            $table->string('penulis');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateKorwilsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('korwils');
+        Schema::dropIfExists('beritas');
     }
 }

@@ -77,6 +77,10 @@ Route::post('/admin/newsletter/save', 'NewsletterController@save');
     Route::get('/admin/member/edit/{id}', 'MemberController@edit');
     Route::post('/admin/member/update', 'MemberController@update');
     Route::get('/admin/member/delete/{id}', 'MemberController@delete');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1fbce41963f849ae21c65a04506c6a9bb9a8ab89
 //Berita
     Route::get('/admin/berita', 'BeritaController@index');
     Route::get('/admin/berita/add', 'BeritaController@add');

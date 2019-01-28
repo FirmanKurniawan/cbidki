@@ -4,37 +4,38 @@
             <!-- Breadcome End-->
             <!-- Order Form Start-->
             <div class="login-form">
-              <div class="login-bg">
                 <div class="container-fluid">
+                  <div class="login-bg">
                     <div class="row">
-                        <form action="{{url('admin/member/save')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
+                        <form action="{{url('admin/berita/save')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
                             @csrf
                             <div class="col-lg-12">
                                 
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Member</h1>
+                                                <h1>Berita</h1>
                                             </div>
                                         </div>
                                     </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputEmail4">Nama</label>
-                                          <input type="hidden" name="id">
-                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Nama" name="nama">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputPassword4">No Identitas</label>
-                                          <input type="number" class="form-control" id="inputPassword4" placeholder="No Identitas" name="no_identitas">
-                                        </div>
-                                      </div>
-                                      <div class="form-row">
+                                    <form>
                                         <div class="form-group col-md-12">
-                                          <label for="inputEmail4">Alamat</label>
-                                          <textarea type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat"></textarea>
+                                          <label for="inputEmail4">Judul</label>
+                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Judul" name="judul">
                                         </div>
-                                      </div>
+                                        <div class="form-group col-md-12">
+                                          <label for="inputPassword4">Tanggal</label>
+                                          <input type="date" class="form-control" id="inputPassword4" name="tanggal">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                          <label for="inputPassword4">Penulis</label>
+                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis">
+                                        </div>                          
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Isi</label>
+                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="isi" placeholder="isi"></textarea>
+                                        </div>
+                                      
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">
@@ -47,16 +48,19 @@
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
-                                          <input type="file" class="form-control" id="inputCity" name="foto" onchange="readURL1(this);">
+                                          <input type="file" class="form-control" id="inputCity" name="gambar_depan" onchange="readURL1(this);">
                                         </div>
+                                        
                                       </div>
-                                      <div class="form-row" style="float: right;">
-                                        <div class="form-group" style="float: right;">
+                                      <div class="form-group">
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group">
                                             <button type="submit" class="btn btn-primary" style="float: right;"><i class="fa fa-edit"></i></button>
                                         </div>
                                       </div>
+                                </form>
                                 </div>
-                              </div>
                             </div>
                         </form>
                         <div class="col-lg-3"></div>
