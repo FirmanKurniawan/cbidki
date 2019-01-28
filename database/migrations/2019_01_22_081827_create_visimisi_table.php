@@ -15,7 +15,7 @@ class CreateVisimisiTable extends Migration
     {
         Schema::create('visimisis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('isi');
+            $table->text('isi');
             $table->string('tipe');
             $table->timestamps();
         });

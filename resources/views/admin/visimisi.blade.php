@@ -7,7 +7,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         
-                        <form action="{{url('visimisi/update')}}" method="POST" class="adminpro-form">
+                        <form action="{{url('admin/visimisi/update')}}" method="POST" class="adminpro-form">
                             @csrf
                             <div class="col-lg-12">
                                 <div class="login-bg">

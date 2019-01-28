@@ -119,6 +119,6 @@ Route::get('/contact', function() {
 Route::get('/service', function() {
     return view('service');
 });
-Route::get('/gallery', function() {
-    return view('gallery');
+Route::get('/merchandise', function() {
+    return view('merchandise');
 });

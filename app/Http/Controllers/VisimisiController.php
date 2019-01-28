@@ -39,7 +39,7 @@ class VisimisiController extends Controller
     	$tipe = "1";
     	$l->tipe = $tipe;
     	$l->save();
-    	return redirect(url('visimisi'));
+    	return redirect(url('admin/visimisi'));
     }
 
 
@@ -64,7 +64,7 @@ class VisimisiController extends Controller
     	$tipe = "2";
     	$l->tipe = $tipe;
     	$l->save();
-    	return redirect(url('visimisi'));
+    	return redirect(url('admin/visimisi'));
     }
 
     public function visimisi_update(Request $r)
@@ -81,7 +81,7 @@ class VisimisiController extends Controller
         $x->tipe = $tipe;
         $x->save();
 
-        return redirect(url('visimisi'));
+        return redirect(url('admin/visimisi'));
     }
 
 
