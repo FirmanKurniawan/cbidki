@@ -42,6 +42,24 @@ Route::get('/admin/footer',function(){
 Route::get('/admin/about',function(){
     return view('admin.about');
 });
+Route::get('/admin/merchandise',function(){
+    return view('admin.merchandise.index');
+});
+Route::get('/admin/merchandise/add',function(){
+    return view('admin.merchandise.add');
+});
+Route::get('/admin/merchandise/edi/{id}',function(){
+    return view('admin.merchandise.edit');
+});
+
+
+//Merchandise
+    Route::get('/merchandise', 'MerchandiseController@indexmerchandise');
+    Route::get('/merchandise/add', 'MerchandiseController@addmerchandise');
+    Route::post('/merchandise/save', 'MerchandiseController@savemerchandise');
+    Route::get('/admin/merchandise/edit/{id}', 'MerchandiseController@editmerchandise');
+    Route::post('/admin/merchandise/update', 'MerchandiseController@updatemerchandise');
+    Route::get('/merchandise/delete/{id}', 'MerchandiseController@deletemerchandise');
 
 //NEWSLETTER
 Route::get('/admin/newsletter', 'NewsletterController@index');
