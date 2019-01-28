@@ -34,7 +34,7 @@
                                             <tbody>
                                                 <?php
                                                 $i = 1;
-                                                $berita = \App\berita::all();  
+                                                $berita = \App\Berita::all();  
                                                 ?>
                                                 @foreach ($berita as $m)
                                                 <tr>
