@@ -99,6 +99,9 @@
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
+                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-book"></i>
+                            <span class="mini-dn">History</span> <span class="indicator-right-menu"></span></a>
+                        </li>
                          <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
                             <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
                         </li>

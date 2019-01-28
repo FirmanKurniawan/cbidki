@@ -42,6 +42,9 @@ Route::get('/admin/footer',function(){
 Route::get('/admin/about',function(){
     return view('admin.about');
 });
+Route::get('/admin/history',function(){
+    return view('admin.history');
+});
 
 //NEWSLETTER
 Route::get('/admin/newsletter', 'NewsletterController@index');
@@ -54,6 +57,7 @@ Route::post('/admin/profile/update/{id}', 'ProfileController@update');
  
 Route::post('/admin/footer/update', 'FooterController@update');
 Route::post('/admin/about/update', 'AboutController@update');
+Route::post('/admin/history/update', 'HistoryController@update');
  
 Auth::routes();
  
