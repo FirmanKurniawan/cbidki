@@ -161,7 +161,12 @@ Route::get('/contact', function() {
 Route::get('/member', function() {
     return view('member');
 });
+
+Route::get('/member2', function() {
+    return view('member2');
+});
 Route::get('/merchandise', function() {
     return view('merchandise');
 });
 Route::get('member/search', 'MemberController@search');
+Route::get('member2/search2', 'MemberController@search2');

@@ -61,12 +61,42 @@ class MemberController extends Controller
 		return redirect(url('/admin/member'));
 	}
 
+    // public function search(Request $request)
+    // {
+    //     $search = $request->search;
+
+    //     $member = Member::all()->where('nama', 'like', '%'.$search.'%');
+
+    //     return view('member', compact('member'));
+    // }
+
+    public function zz()
+    {    
+        $pem = Member::all();
+        return view('member')->with('pem',$pem);
+    }
+
+    public function search(Request $r)
+    {
+        $query = $r->input('query');
+        $show = \App\Member::where('nama',$query)->get();
+        return view('member')->with('show', $show);
+    }
+
+    public function search2(Request $r)
+    {
+        if ($r->has('nama')) {
+        return Member::where('nama','like','%'.$nama.'%')->get();
+        }
+    return response([]);
+    }
+
     public function search(Request $request)
-{
-    $search = $request->search;
+    {
+    if ($request->has('name')) {
+       return User::where('name','like','%'.$name.'%')->get();
+        }
+    return response([]);
+    }
 
-    $member = Member::all()->where('nama', 'like', '%'.$search.'%');
-
-    return view('member', compact('member'));
-}
 }

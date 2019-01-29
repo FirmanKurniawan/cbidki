@@ -7,7 +7,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         
-                        <form action="{{url('footer/update')}}" method="POST" id="adminpro-order-form" class="adminpro-form">
+                        <form action="{{url('admin/footer/update')}}" method="POST" id="adminpro-order-form" class="adminpro-form">
                             @csrf
                             <div class="col-lg-6" style="width: 100%;">
                                 <div class="login-bg">
@@ -30,7 +30,7 @@
                                         <div class="col-md-13"> -->
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 1</p>
-                                                <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="pengantar1">{{$data->pengantar1}}</textarea>
+                                                <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="pengantar1">{!! $data->pengantar1 !!}</textarea>
                                                 
                                             </div>
                                       <br><br>
@@ -39,14 +39,14 @@
                                         <div class="col-md-13"> -->
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 2</p>
-                                                <textarea id="ckeditor2" class="contact-message" cols="30" rows="10" name="pengantar2">{{$data->pengantar2}}</textarea>
+                                                <textarea id="ckeditor2" class="contact-message" cols="30" rows="10" name="pengantar2">{!! $data->pengantar2 !!}</textarea>
                                                 
                                             </div>
                                        <br><br>
                                    
                                             <div class="login-textarea-area">
                                                 <p>Pengantar 3</p>
-                                                <textarea id="ckeditor3" class="contact-message" cols="30" rows="10" name="pengantar3">{{$data->pengantar3}}</textarea>
+                                                <textarea id="ckeditor3" class="contact-message" cols="30" rows="10" name="pengantar3">{!! $data->pengantar3 !!}</textarea>
                                                 
                                             </div>
                                        

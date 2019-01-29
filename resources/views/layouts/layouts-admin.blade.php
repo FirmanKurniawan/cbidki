@@ -141,6 +141,13 @@
                         <li class="nav-item"><a href="{{url('/admin/berita')}}"><i class="far fa-newspaper"></i>
                             <span class="mini-dn">Berita</span> <span class="indicator-right-menu"></span></a>
                         </li>
+                        <li class="nav-item"><a href="{{url('/admin/user')}}"><i class="fa fa-user-plus"></i>
+                            <span class="mini-dn">User</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+                         <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
+                            <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
+                        </li>
+
                     </ul>
                 </div>
             </nav>

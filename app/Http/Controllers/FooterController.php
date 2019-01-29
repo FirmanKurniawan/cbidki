@@ -20,6 +20,6 @@ class FooterController extends Controller
         $data->pengantar2 = $r->pengantar2;
         $data->pengantar3 = $r->pengantar3;
         $data->save();
-        return redirect(url('admin.footer'));
+        return redirect(url('admin/footer'));
     }
 }
