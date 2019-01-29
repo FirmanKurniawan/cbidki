@@ -132,20 +132,22 @@ Route::group(['prefix' => 'gallery'] , function(){
 Route::group(['prefix' => 'gallery2'] , function(){
     Route::get('/', 'GalleryController@indexgallery2');
     Route::post('/save', 'GalleryController@savegallery2');
+    Route::get('/edit/{id}', 'GalleryController@editgallery2');
+    Route::post('/update', 'GalleryController@updategallery2');
     Route::get('/delete/{id}', 'GalleryController@deletegallery2');
 });
 Route::group(['prefix' => 'korwil'] , function(){
     Route::get('/', 'KorwilController@indexkorwil');
     Route::post('/save', 'KorwilController@savekorwil');
     Route::get('/edit/{id}', 'KorwilController@editkorwil');
-    Route::post('update', 'KorwilController@upatekorwil');
+    Route::post('/update', 'KorwilController@upatekorwil');
     Route::get('/delete/{id}', 'KorwilController@deletekorwil');
 });
 Route::group(['prefix' => 'korwil2'] , function(){
     Route::get('/', 'KorwilController@indexkorwilmember');
     Route::post('/save', 'KorwilController@savekorwilmember');
     Route::get('/edit/{id}', 'KorwilController@editkorwilmember');
-    Route::post('update', 'KorwilController@upatekorwilmember');
+    Route::post('/update', 'KorwilController@upatekorwilmember');
     Route::get('/delete/{id}', 'KorwilController@deletekorwilmember');
 });
 Route::post('/admin/visimisi/update', 'VisimisiController@visimisi_update');

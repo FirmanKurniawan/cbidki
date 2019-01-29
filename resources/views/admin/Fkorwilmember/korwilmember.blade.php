@@ -25,29 +25,34 @@ Admin - Korwil Member
                                         <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="false" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
                                                 <tr>
-                                                    <th data-field="No">No</th>
-                                                    <th data-field="nama">Nama</th>
-                                                    <th data-field="kode">Kode</th>
-                                                    <th data-field="logo">Logo</th>
-                                                    <th colspan="2">Action</th>
+                                                    <th data-field="No" style="text-align: center;">No</th>
+                                                    <th data-field="nama" style="text-align: center;">Nama</th>
+                                                    <th data-field="idkorwil" style="text-align: center;">ID Korwil</th>
+                                                    <th data-field="kode" style="text-align: center;">Kode</th>
+                                                    <th data-field="logo" style="text-align: center;">Logo</th>
+                                                    <th colspan="2" style="text-align: center;">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
                                                 $i = 1;
-                                                $korwil2 = \App\Korwilmember::all();  
+                                                $korwil2 = \App\Korwilmember::all();
+                                                $korwil = \App\Korwil::all();  
                                                 ?>
                                                 @foreach ($korwil2 as $n)
+                                                @foreach ($korwil as $d)
                                                 <tr>
-                                                    <td>{{$i++}}</td>
-                                                    <td>{{$n->nama}}</td>
-                                                    <td>{{$n->kode}}</td>
-                                                    <td><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
-                                                    <td><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
+                                                    <td style="text-align: center;">{{$i++}}</td>
+                                                    <td style="text-align: center;">{{$n->nama}}</td>
+                                                    <td style="text-align: center;">{{$d->nama}}</td>
+                                                    <td style="text-align: center;">{{$n->kode}}</td>
+                                                    <td class="datatable-ct"><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
+                                                    <td class="datatable-ct"><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
                                                     </td>
                                                     <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                                 @endforeach
                                             </tbody>
                                         </table>

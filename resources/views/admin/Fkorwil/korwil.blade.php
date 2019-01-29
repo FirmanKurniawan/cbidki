@@ -25,11 +25,11 @@ Admin - Korwil
                                         <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="false" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
                                                 <tr>
-                                                    <th data-field="No">No</th>
-                                                    <th data-field="nama">Nama</th>
-                                                    <th data-field="keterangan">Keterangan</th>
-                                                    <th data-field="logo">Logo</th>
-                                                    <th colspan="2">Action</th>
+                                                    <th data-field="No" style="text-align: center;">No</th>
+                                                    <th data-field="nama" style="text-align: center;">Nama</th>
+                                                    <th data-field="keterangan" style="text-align: center;">Keterangan</th>
+                                                    <th data-field="logo" style="text-align: center;">Logo</th>
+                                                    <th colspan="2" style="text-align: center;">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -39,11 +39,11 @@ Admin - Korwil
                                                 ?>
                                                 @foreach ($korwil as $n)
                                                 <tr>
-                                                    <td>{{$i++}}</td>
-                                                    <td>{{$n->nama}}</td>
-                                                    <td>{{$n->keterangan}}</td>
-                                                    <td><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
-                                                    <td><a href="{{url('korwil/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a></td>
+                                                    <td style="text-align: center;">{{$i++}}</td>
+                                                    <td style="text-align: center;">{{$n->nama}}</td>
+                                                    <td style="text-align: center;">{{$n->keterangan}}</td>
+                                                    <td class="datatable-ct"><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
+                                                    <td class="datatable-ct"><a href="{{url('korwil/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a></td>
                                                     <td class="datatable-ct"><a href="{{url('korwil/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>

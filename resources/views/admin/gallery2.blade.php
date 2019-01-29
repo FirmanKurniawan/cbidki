@@ -29,7 +29,7 @@ Admin - Gallery
                                                     <th data-field="pengantar1">Pengantar 1</th>
                                                     <th data-field="pengantar2">Pengantar 2</th>
                                                     <th data-field="gambar">Gambar</th>
-                                                    <th data-field="action">Action</th>
+                                                    <th colspan="2" data-field="action">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -43,6 +43,8 @@ Admin - Gallery
                                                     <td>{{$n->pengantar1}}</td>
                                                     <td>{{$n->pengantar2}}</td>
                                                     <td><img src="{{ url('images/'.$n->gambar) }}" style="width: 70px; height: 70px"></td>
+                                                    <td class="datatable-ct"><a href="{{url('gallery2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
+                                                    </td>
                                                     <td class="datatable-ct"><a href="{{url('gallery2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>

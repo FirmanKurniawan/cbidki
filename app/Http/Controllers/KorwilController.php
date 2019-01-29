@@ -80,6 +80,7 @@ class KorwilController extends Controller
     public function savekorwilmember(Request $r)
     {
     	$n = new Korwilmember;
+        $n->idkorwil = $r->input('idkorwil');
     	$n->nama = $r->input('nama');
     	$n->kode = $r->input('kode');
     	if(Input::hasFile('logo')){
@@ -103,6 +104,7 @@ class KorwilController extends Controller
     public function updatekorwilmember(Request $r)
     {
     	$u = Korwil::find($r->input('id'));
+        $u->idkorwil = $r->input('idkorwil');
     	$u->nama = $r->input('nama');
     	$u->kode = $r->input('kode');
     	if(Input::hasFile('logo')){
