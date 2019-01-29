@@ -61,19 +61,6 @@ class MemberController extends Controller
 		return redirect(url('/admin/member'));
 	}
 
-
-
-
-
-
-    public function search2(Request $r)
-    {
-        if ($r->has('nama')) {
-        return Member::where('nama','like','%'.$nama.'%')->get();
-        }
-    return response([]);
-    }
-
     public function search(Request $request)
     {
     if ($request->has('name')) {
