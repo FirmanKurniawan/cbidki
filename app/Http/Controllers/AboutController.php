@@ -18,6 +18,6 @@ class AboutController extends Controller
     	$data->pengantar2 = $r->pengantar2;
     	$data->pengantar3 = $r->pengantar3;
     	$data->save();
-    	return redirect('admin.about');
+    	return redirect('admin/about');
     }
 }

@@ -124,15 +124,15 @@
 								?>
 								<h4>About Us</h4>
 								<p>
-									<h3 style="color: black;">{{$data->pengantar1}}</h3>
+									<h3 style="color: black;">{!! $data->pengantar1 !!}</h3>
 									<br>
-									<p style="color: black;">{{$data->pengantar2}}
+									<p style="color: black;">{!! $data->pengantar2 !!}
 									<br>
-									{{$data->pengantar3}}</p>
+									{!! $data->pengantar3 !!}</p>
 								</p>
 							</div>
 						</div>		
-						<div class="col-lg-5  col-md-6 col-sm-6">
+						<div class="col-lg-5  col-md-6 col-sm-6" style="margin-bottom: 12%;">
 							<div class="single-footer-widget">
 								<h4>Newsletter</h4>
 								<p>You can trust us. we only send  offers, not a single spam.</p>
@@ -149,7 +149,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+						<br>
+						<br>
+						<div class="col-lg-5 col-md-6 col-sm-6 social-widget">
 								<h4>Follow Us</h4>
 								<p>Let us be social</p>
 								<div class="footer-social d-flex align-items-center">
