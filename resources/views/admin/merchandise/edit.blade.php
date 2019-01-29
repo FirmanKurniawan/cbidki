@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Edit - Merchandise
+@endsection
 @section('content')
 
             <!-- Breadcome End-->
@@ -27,7 +30,7 @@
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Deskripsi</label>
-                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="deskripsi" placeholder="Deskripsi" value="">{{$merchandise->deskripsi}}</textarea>
+                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="deskripsi" placeholder="Deskripsi" value="">{!!$merchandise->deskripsi!!}</textarea>
                                         </div>
                                       
                                   </div>

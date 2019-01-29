@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard v.2.0 | Adminpro - Admin Template</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -143,9 +143,6 @@
                         </li>
                         <li class="nav-item"><a href="{{url('/admin/user')}}"><i class="fa fa-user-plus"></i>
                             <span class="mini-dn">User</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                         <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
-                            <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
                         </li>
 
                     </ul>

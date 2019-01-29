@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+Contact
+@endsection
 @section('content')
 <!-- start banner Area -->
 			

@@ -18,7 +18,7 @@
 	$q = \App\Profile::where('id', 1)->first();
 
 ?>
-		<title>{{$q->nama}}</title>
+		<title>@yield('title')</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -132,7 +132,7 @@
 								</p>
 							</div>
 						</div>		
-						<div class="col-lg-5  col-md-6 col-sm-6" style="margin-bottom: 12%;">
+						<div class="col-lg-2  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4>Newsletter</h4>
 								<p>You can trust us. we only send  offers, not a single spam.</p>

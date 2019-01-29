@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Newsletter
+@endsection
 @section('content')
 
   <div class="data-table-area mg-b-15">
