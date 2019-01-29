@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @extends('layouts.layouts-admin')
 @section('title')
 Admin - Korwil Member
@@ -39,17 +37,16 @@ Admin - Korwil Member
                                                 <?php
                                                 $i = 1;
                                                 $korwil2 = \App\Korwilmember::all();
-                                                $korwil = \App\Korwil::all();  
+                                                $korwil = \App\Korwil::all()->first();
                                                 ?>
                                                 @foreach ($korwil2 as $n)
                                                 <tr>
                                                     <td style="text-align: center;">{{$i++}}</td>
                                                     <td style="text-align: center;">{{$n->nama}}</td>
-                                                @foreach ($korwil as $d)
-                                                    <td style="text-align: center;">{{$d->nama}}</td>
-                                                @endforeach
+                                                    <td style="text-align: center;">{{$korwil->nama}}</td>
                                                     <td style="text-align: center;">{{$n->kode}}</td>
                                                     <td class="datatable-ct"><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
+
                                                     <td class="datatable-ct"><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
                                                     </td>
                                                     <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
@@ -166,4 +163,3 @@ Admin - Korwil Member
 }
 </script>
 @endsection
->>>>>>> 1da8b43911a06e64fcf09cac61aaf9a545f0ab5f
