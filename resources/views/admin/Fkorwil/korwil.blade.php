@@ -41,7 +41,7 @@ Admin - Korwil
                                                 <tr>
                                                     <td style="text-align: center;">{{$i++}}</td>
                                                     <td style="text-align: center;">{{$n->nama}}</td>
-                                                    <td style="text-align: center;">{{$n->keterangan}}</td>
+                                                    <td style="text-align: center;">{!!$n->keterangan!!}</td>
                                                     <td class="datatable-ct"><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
                                                     <td class="datatable-ct"><a href="{{url('korwil/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a></td>
                                                     <td class="datatable-ct"><a href="{{url('korwil/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>

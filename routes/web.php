@@ -77,7 +77,6 @@ Route::post('/admin/newsletter/save', 'NewsletterController@save');
     Route::get('/admin/member/edit/{id}', 'MemberController@edit');
     Route::post('/admin/member/update', 'MemberController@update');
     Route::get('/admin/member/delete/{id}', 'MemberController@delete');
-
     //User
     Route::get('/admin/user', 'UserController@index');
     Route::get('/admin/user/add', 'UserController@add');
@@ -163,12 +162,13 @@ Route::get('/contact', function() {
 Route::get('/member', function() {
     return view('member');
 });
-
 Route::get('/member2', function() {
     return view('member2');
 });
 Route::get('/merchandise', function() {
     return view('merchandise');
 });
-Route::get('member/search', 'MemberController@search');
 Route::get('member2/search2', 'MemberController@search2');
+Route::get('member/search', 'MemberController@search');
+Route::get('search2/{id}', 'MemberController@search2');
+Route::get('autocomplete', 'MemberController@autocomplete')->name('autocomplete');
