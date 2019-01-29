@@ -1,116 +1,84 @@
 @extends('layouts.user')
+@section('title')
+Member
+@endsection
 @section('content')
-   
-            <style>
-.bulat{
-border-radius:100em;
-opacity:1;
-width:200px;
-height:200px;
-}
-.tengah-teratur{
-    color: black;  
-    margin: 0 auto;
-    text-align: justify;
-    width: 10em;
-}
-</style>
-            <!-- Start service-page Area -->
-            <br><br>
-            <section class="service-page-area section-gap">
-                <h1 class="mb-10 header-text text-center">Cari Anggota</h1>
-                <div class="container" style="padding-top: 40px;">                         
-                    <div class="row">
-<div class="form-inline" style="margin-left: auto; margin-right: auto;">
-    <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit" data-target="#exampleModal" data-toggle="modal">Search</button>
-  </div>
-  </div>
-  <br>
-  <br>
-        <h1 class="mb-10 header-text text-center">Korwil</h1>
-                <br>
-                <br>
-                <div class="row">
- 
-                    <!-- START FOREACH KORWIL -->
-                    <?php
-                    $i = 1;
-                    $kiwil = App\Korwil::all();
- 
-                     ?>
-                     @foreach($kiwil as $k)
-                        <div class="col-lg-4 col-md-6">
-                                                       
-                                <h3 class="text-center"><img class="img-fluid bulat" src="{{ url('images/'.$k->logo) }}" alt="" style="width: 80px; height: 80px;">&nbsp;&nbsp;&nbsp;{{$k->nama}}</h3>
-                                <br>
-                                <?php
-                                    $km = App\Korwilmember::where('idkorwil',$k->id)->get();
-                                 ?>
-                                 @foreach($km as $ka)
-                                <ol class="text-justify" style="">
-                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;{{$ka->nama}}({{$ka->kode}})</h5></li>
- 
-                                    </ol>
-                                    @endforeach
-<br>
+<!-- Start service-page Area -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+<section class="service-page-area section-gap">
+            <form class="form-inline my-2 my-lg-0" action="{{url('member/search')}}" method="get">
+            <label for="formGroupExampleInput">Cari Anggota &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="search" class="form-control" name="query" id="formGroupExampleInput" 
+            placeholder="Cari Disini ..." required>
+            <input type="hidden" name="search" value="1">
+          </form>
+          </div>
+
+
+
+
+<div class="container">
+    <h1>Laravel 5.7 Autocomplete Search using Bootstrap Typeahead JS - ItSolutionStuff.com</h1>   
+
+    <input class="form-control" type="text" name="nama" id="data">
+    <input type="text" name="foto" id="foto">
 </div>
-@endforeach
+<button id="submit" data-toggle="modal" data-target="#exampleModal">tes</button>
 </div>
- 
-<!-- END FOREACH -->
-                        </div> 
- 
-                        </div>
- 
-                    </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+<script type="text/javascript">
+
+   $(document).ready(function() {
+    $('#submit').click(function() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        var id = document.getElementById('data').value;
+        $.ajax({
+             type:"GET",
+             url:"search2/" + id,
+             success : function(results) {
+                 $('#nama').val(results.nama)
+                  $('#alamat').val(results.alamat)
+                  $('#no_identitas').val(results.no_identitas)
+                  document.getElementById('gambar').innerHTML = 
+                    '<img src="images/'+results.foto+' "width="20%"/>';
+             }
+        }); 
+    });
+});  
+
+
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cari Anggota</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <?php  
-        $search = \Request::get('search');
-        $s = \App\Member::where('nama', 'like', '%'.$search.'%')->get();
-        ?>
-        @foreach($s as $z)
-        <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Nama</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Nomor Identitas</th>
-      <th scope="col">Foto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{$z->nama}}</td>
-      <td>{{$z->alamat}}</td>
-      <td>{{$z->no_identitas}}</td>
-      <td><img src="{{ url('images/'.$z->foto) }}" style="width: 70px; height: 70px"></td>
-    </tr>
-  </tbody>
-  @endforeach
-</table>
+      <input type="text" id="nama">
+      <input type="text" id="alamat">
+      <input type="text" id="no_identitas"> 
+      <div id="gambar" class="img-fluid"></div>     {{-- <img src="{{url('images/'.$foto)}}"> --}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
- 
   </div>
 </div>
-   
-</div>
-  </div>
-</div>
-                </div> 
-            </section>
-            <!-- End service-page Area -->
-           
-           
-           
+         
+</section>
+<!-- End service-page Area -->
 @endsection

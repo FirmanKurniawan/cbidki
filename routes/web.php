@@ -168,5 +168,7 @@ Route::get('/member2', function() {
 Route::get('/merchandise', function() {
     return view('merchandise');
 });
-Route::get('member/search', 'MemberController@search');
 Route::get('member2/search2', 'MemberController@search2');
+Route::get('member/search', 'MemberController@search');
+Route::get('search2/{id}', 'MemberController@search2');
+Route::get('autocomplete', 'MemberController@autocomplete')->name('autocomplete');
