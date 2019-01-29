@@ -30,8 +30,6 @@ class GalleryController extends Controller
         .$gambar->getClientOriginalExtension();
         $gambar->move(storage_path('images'), $gambar2);
         Gallery::create([
-            'pengantar1' => $r->input('pengantar1'),
-            'pengantar2' => $r->input('pengantar2'),
             'gambar' => $gambar2,
           ]);
     }  

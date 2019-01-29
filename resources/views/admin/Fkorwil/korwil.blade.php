@@ -88,22 +88,45 @@
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div>
-                        <div class="col-lg-8">
-                            <div class="login-input-area">
-                                <label>Logo</label>
-                                <input name="logo" type="file" class="ts-forms" style="">
+                                      <center>
+                        <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <br>
+                                          <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                          <center>
+                                            <label>Logo</label>
+                                        </center>
+                                    </div>
+                                </center>
+                            </div>
+                            <center>
+                            <div class="form-row">
+                              <div class="form-group col-md-12">
+                                <input type="file" id="inputCity" name="logo" onchange="readURL1(this);">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
-                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-save">  SAVE</i></button>
-                            </div>
+                        </center>
+                        <center>
+                        <div class="form-row">
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i></button>
                         </div>
                     </div>
-                </div>
+                    </center>
                 </form>
             </div>
+<script type="text/javascript">
+ function readURL1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#blah1')
+      .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
 @endsection

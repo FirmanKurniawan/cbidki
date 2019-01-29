@@ -15,6 +15,7 @@ class CreateKorwilmembersTable extends Migration
     {
         Schema::create('korwilmembers', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('idkorwil');
             $table->string('nama');
             $table->string('kode');
             $table->string('logo');
