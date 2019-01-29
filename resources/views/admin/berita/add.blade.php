@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Add - Berita
+@endsection
 @section('content')
 
             <!-- Breadcome End-->
@@ -29,7 +32,7 @@
                                         </div>
                                         <div class="form-group col-md-12">
                                           <label for="inputPassword4">Penulis</label>
-                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis" value="{{ Auth::user()->name }}">
+                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis" value="{{ Auth::user()->name }}" disabled="true">
                                         </div>                          
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Isi</label>

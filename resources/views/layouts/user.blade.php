@@ -18,7 +18,7 @@
 	$q = \App\Profile::where('id', 1)->first();
 
 ?>
-		<title>{{$q->nama}}</title>
+		<title>@yield('title')</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--

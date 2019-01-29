@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+About
+@endsection
 @section('content')
 	<?php
 				$q = \App\Profile::where('id', 1)->first();

@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Welcome
+@endsection
 @section('content')
 <!-- Breadcome start-->
             <div class="breadcome-area mg-b-30 small-dn">

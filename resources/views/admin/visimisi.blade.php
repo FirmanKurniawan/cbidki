@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Visi Misi
+@endsection
 @section('content')
 
             <!-- Breadcome End-->
