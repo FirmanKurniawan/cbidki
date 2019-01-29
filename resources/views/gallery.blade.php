@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+Gallery
+@endsection
 @section('content')
 
 			<!-- Start training Area -->

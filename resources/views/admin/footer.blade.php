@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Footer
+@endsection
 @section('content')
 
             <!-- Breadcome End-->

@@ -1,4 +1,7 @@
 @extends('layouts.user')
+@section('title')
+Service
+@endsection
 @section('content')
 	
 			

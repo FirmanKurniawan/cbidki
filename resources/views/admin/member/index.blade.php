@@ -1,6 +1,8 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Member
+@endsection
 @section('content')
-
   <div class="data-table-area mg-b-15">
                 <div class="container-fluid">
                     <div class="row">

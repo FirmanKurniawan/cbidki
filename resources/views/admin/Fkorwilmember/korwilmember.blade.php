@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Korwil Member
+@endsection
 @section('content')
 
   <div class="data-table-area mg-b-15">
@@ -40,7 +43,8 @@
                                                     <td>{{$n->nama}}</td>
                                                     <td>{{$n->kode}}</td>
                                                     <td><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
-                                                    <td><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a></td>
+                                                    <td><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
+                                                    </td>
                                                     <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
@@ -72,15 +76,28 @@
                                         ?>
                                         <div class="col-lg-8">
                                             <div class="login-select">
-                                                <select class="form-control" name="nama">
+                                                <select class="form-control" name="idkorwil">
                                                    <option selected>Pilih</option>
                                                    @foreach($korwil as $n)
-                                                   <option value="{{$n->nama}}">{{$n->nama}}</option>
+                                                   <option value="{{$n->id}}">{{$n->nama}}</option>
                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>Nama</p>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col-lg-8">
+                                            <div class="login-textarea-area">
+                                                <input class="form-control" cols="30" rows="10" name="nama">
+                                            </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
@@ -90,26 +107,50 @@
                                          
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="kode"></textarea>
-                                                <i class="fa fa-comment login-user"></i>
+                                                <input class="form-control" cols="30" rows="10" name="kode">
                                             </div>
                                     </div>
-                        <div class="col-lg-8">
-                            <div class="login-input-area">
-                                <label>Logo</label>
-                                <input name="logo" type="file" class="ts-forms" style="">
+                                    <br>
+                                    <div class="form-row">
+                                      <center>
+                                        <div class="form-group col-md-12">
+                                            <br>
+                                          <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                          <center>
+                                            <label>Logo</label>
+                                        </center>
+                                    </div>
+                                </center>
+                            </div>
+                            <center>
+                            <div class="form-row">
+                              <div class="form-group col-md-12">
+                                <input type="file" id="inputCity" name="logo" onchange="readURL1(this);">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
-                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-save">  SAVE</i></button>
-                            </div>
+                        </center>
+                        <center>
+                        <div class="form-row">
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i></button>
                         </div>
                     </div>
-                </div>
+                    </center>
                 </form>
             </div>
+        </div>
+            <script type="text/javascript">
+ function readURL1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#blah1')
+      .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
 @endsection

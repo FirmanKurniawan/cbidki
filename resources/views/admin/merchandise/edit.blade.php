@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Edit - Merchandise
+@endsection
 @section('content')
 
             <!-- Breadcome End-->

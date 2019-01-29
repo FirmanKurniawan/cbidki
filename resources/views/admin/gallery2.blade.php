@@ -1,4 +1,7 @@
 @extends('layouts.layouts-admin')
+@section('title')
+Admin - Gallery
+@endsection
 @section('content')
 
   <div class="data-table-area mg-b-15">
@@ -87,22 +90,49 @@
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div>
-                        <div class="col-lg-8">
-                            <div class="login-input-area">
-                                <label>Gambar</label>
-                                <input name="gambar" type="file" class="ts-forms" style="">
+                                    <div class="form-row">
+                                        <br>
+                                        <center>
+                                          <div class="form-group col-md-12">
+                                            <br>
+                                            <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                            <center>
+                                                <label>Gambar</label>
+                                            </center>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="form-row">
+                                    <center>
+                                    <div class="form-group col-md-12">
+                                      <input type="file" id="inputCity" name="gambar" onchange="readURL1(this);">
+                                  </div>
+                            </center>
+                              </div>
+                              <center> 
+                              <div class="form-row">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i></button>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
-                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-save">SAVE</i></button>
-                            </div>
+                            </center>
                         </div>
                     </div>
                 </div>
                 </form>
             </div>
+<script type="text/javascript">
+ function readURL1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#blah1')
+      .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
 @endsection
