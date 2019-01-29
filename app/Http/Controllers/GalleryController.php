@@ -65,6 +65,30 @@ class GalleryController extends Controller
         $n->save();
         return redirect(url('admin/gallery2'));
     }
+
+    public function editgallery2($id)
+    {
+        $gallery2 = Gallery2::find($id);
+        return view('admin.Fgallery2.edit')->with('gallery2',$gallery2);
+    }
+
+    public function updategallery2(Request $r)
+    {
+        $n = Gallery2::find($r->input('id'));
+      $n->pengantar1 = $r->input('pengantar1');
+      $n->pengantar2 = $r->input('pengantar2');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $n->gambar = $gambar;
+        }
+        $n->save();
+        return redirect(url('admin/gallery2'));
+    }
+
     public function deletegallery2($id)
     {
         $gallery2 = Gallery2::find($id);

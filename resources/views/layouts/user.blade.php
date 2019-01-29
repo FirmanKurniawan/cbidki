@@ -18,7 +18,7 @@
 	$q = \App\Profile::where('id', 1)->first();
 
 ?>
-		<title>@yield('title')</title>
+		<title>{{$q->nama}}</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -83,41 +83,11 @@
 
 			<!-- start banner Area -->
 				@yield('content')
-			<!-- End banner Area -->	
-
-			<!-- Start about-video Area -->
-			
-			<!-- End about-video Area -->
-			
-			<!-- Start feature Area -->
-			
-			<!-- End feature Area -->
-			
-			<!-- Start home-about Area -->
-			
-			<!-- End home-about Area -->
-			
-			<!-- Start price Area -->
-			
-			<!-- End price Area -->
-
-			<!-- Start booking Area -->
-			
-			<!-- End booking Area -->
-
-			<!-- Start latest-blog Area -->
-			
-			<!-- End latest-blog Area -->		
-
-			<!-- Start gallery Area -->
-			
-			<!-- End gallery Area -->
-			
-			<!-- start footer Area -->		
+				
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-5  col-md-6 col-sm-6">
+						<div class="col-lg-4  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<?php
 								$data = \App\Footer::where('id',1)->first();
@@ -131,8 +101,8 @@
 									{!! $data->pengantar3 !!}</p>
 								</p>
 							</div>
-						</div>		
-						<div class="col-lg-2  col-md-6 col-sm-6">
+						</div>
+						<div class="col-lg-4  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4>Newsletter</h4>
 								<p>You can trust us. we only send  offers, not a single spam.</p>
@@ -148,29 +118,36 @@
 									  </form>
 								</div>
 							</div>
-						</div>
-						<br>
-						<br>
-						<div class="col-lg-5 col-md-6 col-sm-6 social-widget">
+						</div>			
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
 								<h4>Follow Us</h4>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#" target="_blank"><i class="fa fa-facebook" style="padding: 35%; color: black;"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-twitter" style="padding: 35%; color: black;"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-chrome" style="padding: 35%; color: black;"></i></a>
-									<a href="#" target="_blank"><i class="fa fa-instagram" style="padding: 35%; color: black;"></i></a>
-								</div>
-						</div>										
+								<div class="footer-bottom row" style="margin-top: -40px;">	
+								<div class="footer-social col-lg-8 col-sm-6">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+
+						</div>
+						</div>
 					</div>
+							</div>
+						</div>				
+			
+
+						</div>	
+
+						
 					<div class="footer-bottom row">
-						<p class="footer-text m-0 col-lg-6 col-md-12">
+						<p class="footer-text scol-lg-8 col-md-12 col-sm-12" style="text-align: center;">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
 					</div>
 				</div>
-			</footer>
+			</footer>	
 			<!-- End footer Area -->
 
 			<script src="{{asset('cbi_user/js/vendor/jquery-2.2.4.min.js')}}"></script>

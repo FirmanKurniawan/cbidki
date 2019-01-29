@@ -1,6 +1,6 @@
 @extends('layouts.layouts-admin')
 @section('title')
-Add - Berita
+Edit - Korwil
 @endsection
 @section('content')
 
@@ -8,61 +8,55 @@ Add - Berita
             <!-- Order Form Start-->
             <div class="login-form">
                 <div class="container-fluid">
-                  <div class="login-bg">
                     <div class="row">
-                        <form action="{{url('admin/berita/save')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
+                        <form action="{{url('korwil2/update')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
                             @csrf
                             <div class="col-lg-12">
-                                
+                                <div class="login-bg">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Berita</h1>
+                                                <h1>Korwil</h1>
                                             </div>
                                         </div>
                                     </div>
-                                    <form>
-                                        <div class="form-group col-md-12">
-                                          <label for="inputEmail4">Judul</label>
-                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Judul" name="judul">
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        	<input type="hidden" name="id" value="{{$korwil2->id}}">
+                                          	<label for="inputEmail4">Nama</label>
+                                          	<input type="text" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="{{$korwil2->nama}}">
                                         </div>
-                                        <div class="form-group col-md-12">
-                                          <label for="inputPassword4">Tanggal</label>
-                                          <input type="date" class="form-control" id="inputPassword4" name="tanggal">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Kode</label>
+                                          <input type="number" class="form-control" id="inputPassword4" placeholder="Kode" name="kode" value="{{$korwil2->kode}}">
                                         </div>
-                                        <div class="form-group col-md-12">
-                                          <label for="inputPassword4">Penulis</label>
-                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis" value="{{ Auth::user()->name }}" readonly>
-                                        </div>                          
-                                        <div class="form-group col-md-12">
-                                          <label for="inputCity">Isi</label>
-                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="isi" placeholder="isi"></textarea>
-                                        </div>
-                                      
+                                      </div>
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">
-                                            <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                            <br>
+                                            <label>Logo</label>
+                                            <br>
+                                            <img src="{{asset('images/'.$korwil2->logo)}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                             <center>
-                                            <label>Foto</label>
                                             </center>
                                           </div>
                                           </center>
                                       </div>
+                                      <center>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
-                                          <input type="file" class="form-control" id="inputCity" name="gambar_depan" onchange="readURL1(this);">
+                                          <input type="file" id="inputCity" name="logo" onchange="readURL1(this);">
                                         </div>
-                                        
                                       </div>
                                       <div class="form-group">
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary" style="float: right;"><i class="fa fa-edit"></i></button>
+                                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-pen"></i></button>
                                         </div>
                                       </div>
-                                </form>
+                                    </center>
                                 </div>
                             </div>
                         </form>
