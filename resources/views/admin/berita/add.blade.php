@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="form-group col-md-12">
                                           <label for="inputPassword4">Penulis</label>
-                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis">
+                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Penulis" name="penulis" value="{{ Auth::user()->name }}">
                                         </div>                          
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Isi</label>
