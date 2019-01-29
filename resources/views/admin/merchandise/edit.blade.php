@@ -36,20 +36,14 @@ Edit - Merchandise
                                         <br>
                                         <center>
                                           <div class="form-group col-md-4">
-                                          <?php
-                                          $profile = \App\Merchandise::all()->where('id', 1);
-                                            ?>
-                                          @foreach($profile as $p)
                                             <center>
                                                 <div class="container">        
-                                                  <img src="{{url('images/'. $p->logo)}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: auto; margin-right: auto;">                                    
+                                                  <img src="{{url('images/'. $merchandise->logo)}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: auto; margin-right: auto;">                                    
                                                     <input name="logo" type="file" class="" style="" onchange="readURL1(this);" >
                                                 </div>
 
                                             </center>
                                           </div>
-
-                                        @endforeach
                                   
                                  
                                       <br>

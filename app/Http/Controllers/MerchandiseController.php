@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use \App\Merchandise;
 
 class MerchandiseController extends Controller
@@ -14,7 +15,7 @@ class MerchandiseController extends Controller
 
     public function savemerchandise(Request $r)
     {
-    	$t = new Merchandise;
+/*    	$t = new Merchandise;
 
     	$t->logo = $r->input('logo');
         $file = $r->file('logo');
@@ -26,7 +27,20 @@ class MerchandiseController extends Controller
     	$t->deskripsi = $r->input('deskripsi');
     	
     	$t->save();
-    	return redirect(url('admin/merchandise'));
+    	return redirect(url('admin/merchandise'));*/
+
+
+        $m = new Merchandise;
+        $m->nama = $r->input('nama');
+        $m->deskripsi = $r->input('deskripsi');
+        if (Input::hasFile('logo')) {
+            $file1 = $r->file('logo');
+            $filename1 = $file1->getClientOriginalName();
+            Input::file('logo')->move(storage_path('images'), $filename1);
+            $m->logo = $filename1;
+        }
+        $m->save();
+        return redirect(url('/admin/merchandise'));
     }
 
     public function editmerchandise($id)
@@ -34,9 +48,9 @@ class MerchandiseController extends Controller
     	$merchandise = Merchandise::find($id);
     	return view('admin.merchandise.edit')->with('merchandise',$merchandise);
     }
-    public function updatemerchandise(Request $m)
+    public function updatemerchandise(Request $r)
     {
-    	$s = Merchandise::find($m->input('id'));
+/*    	$s = Merchandise::find($m->input('id'));
 
     	$file = $m->file('logo');
         $filename = $file->getClientOriginalName();
@@ -47,7 +61,19 @@ class MerchandiseController extends Controller
     	$s->deskripsi = $m->input('deskripsi');
         
     	$s->save();
-    	return redirect(url('admin/merchandise'));
+    	return redirect(url('admin/merchandise'));*/
+
+        $m = Merchandise::find($r->input('id'));
+        $m->nama = $r->input('nama');
+        $m->deskripsi = $r->input('deskripsi');
+        if (Input::hasFile('logo')) {
+            $file1 = $r->file('logo');
+            $filename1 = $file1->getClientOriginalName();
+            Input::file('logo')->move(storage_path('images'), $filename1);
+            $m->foto = $filename1;
+        }
+        $m->save();
+        return redirect(url('/admin/merchandise')); 
     }
     public function deletemerchandise($id)
     {
