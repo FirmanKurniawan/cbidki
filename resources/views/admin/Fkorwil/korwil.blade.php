@@ -56,7 +56,11 @@ Admin - Korwil
                         </div>
                         <div class="col-lg-12">
                                 <div class="login-bg">
+                                    <center>
+                                        <label>Tambah Data</label>
+                                        </center>
                                     <div class="row">
+                                        <br>
                                         <div class="col-lg-12">
                                         </div>
                                     </div>
@@ -97,7 +101,9 @@ Admin - Korwil
                                             <br>
                                           <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                           <center>
-                                            <label>Logo</label>
+                                            <div class="login-input-head">
+                                                <p>Logo</p>
+                                            </div>
                                         </center>
                                     </div>
                                 </center>

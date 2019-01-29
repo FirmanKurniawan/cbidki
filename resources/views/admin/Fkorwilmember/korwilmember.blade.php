@@ -65,7 +65,11 @@ Admin - Korwil Member
                                         <div class="col-lg-12">
                                         </div>
                                     </div>
+                                    <center>
+                                        <label>Tambah Data</label>
+                                        </center>
                                     <div class="row">
+                                        <br>
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
                                                 <p>Pilih Korwil Disini</p>
@@ -110,14 +114,15 @@ Admin - Korwil Member
                                                 <input class="form-control" cols="30" rows="10" name="kode">
                                             </div>
                                     </div>
-                                    <br>
-                                    <div class="form-row">
                                       <center>
+                                    <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <br>
                                           <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                           <center>
-                                            <label>Logo</label>
+                                            <div class="login-input-head">
+                                                <p>Logo</p>
+                                            </div>
                                         </center>
                                     </div>
                                 </center>

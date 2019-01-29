@@ -55,7 +55,11 @@ Admin - Gallery
                         </div>
                         <div class="col-lg-12">
                                 <div class="login-bg">
+                                    <center>
+                                        <label>Tambah Data</label>
+                                        </center>
                                     <div class="row">
+                                        <br>
                                         <div class="col-lg-12">
                                         </div>
                                     </div>
