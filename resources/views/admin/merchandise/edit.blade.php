@@ -36,24 +36,27 @@ Edit - Merchandise
                                         <br>
                                         <center>
                                           <div class="form-group col-md-4">
-                                          
+                                          <?php
+                                          $profile = \App\Merchandise::all()->where('id', 1);
+                                            ?>
+                                          @foreach($profile as $p)
                                             <center>
                                                 <div class="container">        
-                                                  <img src="{{asset('picture1/noimg.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: auto; margin-right: auto;">                                    
+                                                  <img src="{{url('images/'. $p->logo)}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: auto; margin-right: auto;">                                    
                                                     <input name="logo" type="file" class="" style="" onchange="readURL1(this);" >
                                                 </div>
 
                                             </center>
                                           </div>
 
-
+                                        @endforeach
                                   
                                  
                                       <br>
                                       </div>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                           <div class="login-input-area">
-                                            <button type="submit" class="btn btn-primary" style="float: right; margin-top:280px;"><i class="fa fa-edit"></i></button>
+                                            <button type="submit" class="btn btn-primary" style="float: left; "><i class="fa fa-edit"></i></button>
                                       </div>
                                       </div>
                                       <br>

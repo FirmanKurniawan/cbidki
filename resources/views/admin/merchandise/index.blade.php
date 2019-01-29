@@ -78,8 +78,8 @@ Admin - Merchandise
                                          
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="nama"></textarea>
-                                                <i class="fa fa-comment login-user"></i>
+                                                <input type="text" class="form-control" cols="30" rows="10" name="nama">
+                                              
                                             </div>
                                         </div>
                                      </div>
@@ -92,7 +92,7 @@ Admin - Merchandise
                                          
                                         <div class="col-lg-8">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="deskripsi"></textarea>
+                                                <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="deskripsi"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div><br>

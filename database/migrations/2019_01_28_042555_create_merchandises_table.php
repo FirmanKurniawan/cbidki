@@ -17,7 +17,7 @@ class CreateMerchandisesTable extends Migration
             $table->increments('id');
             $table->string('nama');
             $table->text('deskripsi');
-            $table->string('logo');
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

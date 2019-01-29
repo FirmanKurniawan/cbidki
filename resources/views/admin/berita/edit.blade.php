@@ -1,4 +1,4 @@
-@extends('layouts.layouts-admin')
+  @extends('layouts.layouts-admin')
 @section('title')
 Edit - Berita
 @endsection
@@ -48,7 +48,7 @@ Edit - Berita
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputEmail4">Penulis</label>
-                                          <textarea type="text" class="form-control" id="inputEmail4" placeholder="Penulis" name="penulis">{{$m->penulis}}</textarea>
+                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Penulis" name="penulis" value="{{$m->penulis}}" readonly>
                                         </div>
                                       </div>
                                       {{-- <div class="form-row">
