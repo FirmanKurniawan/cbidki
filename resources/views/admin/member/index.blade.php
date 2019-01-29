@@ -42,7 +42,7 @@ Admin - Member
                                                     <td>{{$i++}}</td>
                                                     <td>{{$m->nama}}</td>
                                                     <td>{{$m->no_identitas}}</td>
-                                                    <td>{{$m->alamat}}</td>
+                                                    <td>{!!$m->alamat!!}</td>
                                                     <td><img src="{{ url('images/'.$m->foto) }}" style="width: 70px; height: 70px"></td>
                                                     <td class="datatable-ct"><a href="{{url('admin/member/edit/'.$m->id)}}"><i class="fa fa-edit"></i></a>
                                                     </td>
@@ -53,15 +53,14 @@ Admin - Member
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="login-button-pro" style="margin-left: 90%;">
                                 <br>
                                 <a href="{{url('admin/member/add')}}" class="login-button login-button-lg"><i class="fas fa-plus"></i></a>
                             </div>
-                        </div>
-                    </div>
+                        </div>               
                 </div>
                                 </div>
                             </div> 

@@ -56,15 +56,15 @@ Admin - Berita
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="row">
-                        <div class="col-lg-4">
-                        <div class="col-lg-8">
-                            <div class="login-button-pro">
+                    <div class="row">
+                      
+                        <div class="col-lg-12">
+                            <div class="login-button-pro" style="margin-left: 90%;">
                                 <br>
                                 <a href="{{url('admin/berita/add')}}" class="login-button login-button-lg"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                                 </div>
                             </div> 

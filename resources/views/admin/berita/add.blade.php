@@ -51,7 +51,7 @@ Add - Berita
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
-                                          <input type="file" class="form-control" id="inputCity" name="gambar_depan" onchange="readURL1(this);">
+                                          <input type="file" class="form-control" id="inputCity" name="foto" onchange="readURL1(this);">
                                         </div>
                                         
                                       </div>
@@ -59,7 +59,7 @@ Add - Berita
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary" style="float: right;"><i class="fa fa-edit"></i></button>
+                                            <button type="submit" class="btn btn-primary" style="float: right;"><i class="fa fa-plus"></i></button>
                                         </div>
                                       </div>
                                 </form>

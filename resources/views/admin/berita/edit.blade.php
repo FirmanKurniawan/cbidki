@@ -9,10 +9,6 @@ Edit - Berita
             <div class="login-form">
                 <div class="container-fluid">
                     <div class="row">
-                    	<?php
-                    		$berita = \App\Berita::all();
-                    	?>
-                    	@foreach ($berita as $m)
                         <form action="{{url('admin/berita/update')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
                             @csrf
                             <div class="col-lg-12">
@@ -26,20 +22,20 @@ Edit - Berita
                                     </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
-                                        	<input type="hidden" name="id" value="{{$m->id}}">
+                                        	<input type="hidden" name="id" value="{{$b->id}}">
                                           	<label for="inputEmail4">Judul</label>
-                                          	<input type="text" class="form-control" id="inputEmail4" placeholder="Judul" name="judul" value="{{$m->judul}}">
+                                          	<input type="text" class="form-control" id="inputEmail4" placeholder="Judul" name="judul" value="{{$b->judul}}">
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputPassword4">Tanggal</label>
-                                          <input type="date" class="form-control" id="inputPassword4" placeholder="Tanggal" name="tanggal" value="{{$m->tanggal}}">
+                                          <input type="date" class="form-control" id="inputPassword4" placeholder="Tanggal" name="tanggal" value="{{$b->tanggal}}">
                                         </div>
                                       </div>
 
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputCity">Isi</label>
-                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="isi" placeholder="Deskripsi" value="">{{$m->isi}}</textarea>
+                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputCity" name="isi" placeholder="Isi" value="">{{$b->isi}}</textarea>
                                         </div>
                                       
                                   </div>
@@ -48,23 +44,10 @@ Edit - Berita
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputEmail4">Penulis</label>
-                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Penulis" name="penulis" value="{{$m->penulis}}" readonly>
+                                          <input type="text" class="form-control" id="inputEmail4" placeholder="Penulis" name="penulis" value="{{$b->penulis}}" readonly>
                                         </div>
                                       </div>
-                                      {{-- <div class="form-row">
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                            <center>
-                                            <label>afas</label>
-                                            </center>
-                                          </div>
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                          </div>
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                          </div>
-                                      </div> --}}
+                                      
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">
@@ -90,7 +73,7 @@ Edit - Berita
                                 </div>
                             </div>
                         </form>
-                    	@endforeach
+
                         <div class="col-lg-3"></div>
                     </div>
                 </div>

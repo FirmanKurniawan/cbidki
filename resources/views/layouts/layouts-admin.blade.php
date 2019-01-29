@@ -97,21 +97,21 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Profile Kami</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Profile CBI</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="{{url('/admin/profile')}}" class="dropdown-item"><i class="fa fa-user"></i>Profile</a>
-                                <a href="{{url('/admin/about')}}" class="dropdown-item"><i class="fa fa-globe"></i>About</a>
-                                <a href="{{url('/admin/footer')}}" class="dropdown-item"><i class="fa fa-font"></i>Footer</a>
-                                <a href="{{url('/admin/visimisi')}}" class="dropdown-item"><i class="fa fa-envelope"></i>Visi Misi</a>
-                                <a href="{{url('/admin/history')}}" class="dropdown-item"><i class="fa fa-history"></i>History</a>
+                                <a href="{{url('/admin/profile')}}" class="dropdown-item"><i class="fa fa-user"></i>&nbsp;Profile</a>
+                                <a href="{{url('/admin/about')}}" class="dropdown-item"><i class="fa fa-globe"></i>&nbsp;About</a>
+                                <a href="{{url('/admin/footer')}}" class="dropdown-item"><i class="fa fa-font"></i>&nbsp;Footer</a>
+                                <a href="{{url('/admin/visimisi')}}" class="dropdown-item"><i class="fa fa-envelope"></i>&nbsp;Visi Misi</a>
+                                <a href="{{url('/admin/history')}}" class="dropdown-item"><i class="fa fa-history"></i>&nbsp;History</a>
                             </div>
                         </li>
 
                         <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Gallery</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="{{url('admin/gallery2')}}" class="dropdown-item"><i class="fa fa-image"></i>Gallery</a>
-                                <a href="{{url('/admin/gallery')}}" class="dropdown-item"><i class="fab fa-gg-circle"></i>Multimedia</a>
+                                <a href="{{url('admin/gallery2')}}" class="dropdown-item"><i class="fa fa-image"></i>&nbsp;Gallery</a>
+                                <a href="{{url('/admin/gallery')}}" class="dropdown-item"><i class="fab fa-gg-circle"></i>&nbsp;Multimedia</a>
                             </div>
                         </li>
 
@@ -127,8 +127,8 @@
                         <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Korwil</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="{{url('/admin/korwil')}}" class="dropdown-item"><i class="fa fa-road"></i>Korwil</a>
-                                <a href="{{url('/admin/korwil2')}}" class="dropdown-item"><i class="fa fa-user-shield"></i>Korwil Member</a>
+                                <a href="{{url('/admin/korwil')}}" class="dropdown-item"><i class="fa fa-road"></i>&nbsp;Korwil</a>
+                                <a href="{{url('/admin/korwil2')}}" class="dropdown-item"><i class="fa fa-user-shield"></i>&nbsp;Korwil Member</a>
                             </div>
                         </li>
 

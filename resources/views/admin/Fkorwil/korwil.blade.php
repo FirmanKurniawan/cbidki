@@ -75,7 +75,7 @@ Admin - Korwil
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <input type="text" class="form-control" cols="30" rows="10" name="nama">
                                                 
@@ -89,17 +89,17 @@ Admin - Korwil
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="keterangan"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div>
                                       <center>
-                        <div class="form-row">
-                                        <div class="form-group col-md-12">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
                                             <br>
-                                          <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                                <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                           <center>
                                             <div class="login-input-head">
                                                 <p>Logo</p>

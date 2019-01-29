@@ -20,17 +20,20 @@ Edit - Korwil
                                             </div>
                                         </div>
                                     </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
+                                      <div class="row">
+                                        <div class="form-group col-md-12">
                                         	<input type="hidden" name="id" value="{{$korwil->id}}">
                                           	<label for="inputEmail4">Nama</label>
                                           	<input type="text" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="{{$korwil->nama}}">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-group col-md-12">
                                           <label for="inputPassword4">Keterangan</label>
-                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Keterangan" name="keterangan" value="{{$korwil->keterangan}}">
+                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputPassword4" placeholder="Keterangan" name="keterangan" value="">{{$korwil->keterangan}}</textarea>
                                         </div>
                                       </div>
+                                    
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">

@@ -40,8 +40,8 @@ Admin - Gallery
                                                 @foreach ($gallery2 as $n)
                                                 <tr>
                                                     <td>{{$i++}}</td>
-                                                    <td>{{$n->pengantar1}}</td>
-                                                    <td>{{$n->pengantar2}}</td>
+                                                    <td>{!!$n->pengantar1!!}</td>
+                                                    <td>{!!$n->pengantar2!!}</td>
                                                     <td><img src="{{ url('images/'.$n->gambar) }}" style="width: 70px; height: 70px"></td>
                                                     <td class="datatable-ct"><a href="{{url('gallery2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
                                                     </td>
@@ -76,9 +76,9 @@ Admin - Gallery
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar1"></textarea>
+                                                <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="pengantar1"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div>
@@ -90,9 +90,9 @@ Admin - Gallery
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
-                                                <textarea class="contact-message" cols="30" rows="10" name="pengantar2"></textarea>
+                                                <textarea id="ckeditor2" class="contact-message" cols="30" rows="10" name="pengantar2"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
                                     </div>

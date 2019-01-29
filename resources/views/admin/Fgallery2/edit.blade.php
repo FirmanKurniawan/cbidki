@@ -20,15 +20,15 @@ Edit - Korwil
                                             </div>
                                         </div>
                                     </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
+                                      <div class="row">
+                                        <div class="form-group col-md-12">
                                         	<input type="hidden" name="id" value="{{$gallery2->id}}">
                                           	<label for="inputEmail4">Pengantar 1</label>
-                                          	<input type="text" class="form-control" id="inputEmail4" placeholder="Pengantar 1" name="pengantar1" value="{{$gallery2->pengantar1}}">
+                                          	<textarea id="ckeditor1" type="text" class="form-control" id="inputEmail4" placeholder="Pengantar 1" name="pengantar1" value="">{{$gallery2->pengantar1}}</textarea>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                           <label for="inputPassword4">Pengantar 2</label>
-                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Pengantar 2" name="pengantar2" value="{{$gallery2->pengantar2}}">
+                                          <textarea id="ckeditor2" type="text" class="form-control" id="inputPassword4" placeholder="Pengantar 2" name="pengantar2" value="">{{$gallery2->pengantar2}}</textarea>
                                         </div>
                                       </div>
                                       <div class="form-row">

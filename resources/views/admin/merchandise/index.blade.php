@@ -76,7 +76,7 @@ Admin - Merchandise
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <input type="text" class="form-control" cols="30" rows="10" name="nama">
                                               
@@ -90,7 +90,7 @@ Admin - Merchandise
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <textarea id="ckeditor1" class="contact-message" cols="30" rows="10" name="deskripsi"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
@@ -104,7 +104,7 @@ Admin - Merchandise
                                             </div>
                                         </div><br>
                                         <center>
-                                          <div class="form-group col-md-4">
+                                          <div class="form-group col-md-12">
                                             <img src="{{asset('picture1/noimg.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: 90px;">
                                             <center>
                                                 <div class="container-fluid" style="width: 100%;">                                            
@@ -121,7 +121,7 @@ Admin - Merchandise
                         <div class="col-lg-4">
                         <div class="col-lg-8">
                             <div class="login-button-pro">
-                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-save">SAVE</i></button>
+                                <button type="submit" class="login-button login-button-lg"><i class="fa fa-save"></i> SAVE</button>
                             </div>
                         </div>
                     </div>

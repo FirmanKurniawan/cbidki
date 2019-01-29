@@ -83,7 +83,7 @@ Admin - Korwil Member
                                         <?php
                                         $korwil = \App\Korwil::all();  
                                         ?>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-select">
                                                 <select class="form-control" name="idkorwil">
                                                    <option selected>Pilih</option>
@@ -101,7 +101,7 @@ Admin - Korwil Member
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <input class="form-control" cols="30" rows="10" name="nama">
                                             </div>
@@ -114,7 +114,7 @@ Admin - Korwil Member
                                             </div>
                                         </div>
                                          
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-12">
                                             <div class="login-textarea-area">
                                                 <input class="form-control" cols="30" rows="10" name="kode">
                                             </div>
