@@ -40,11 +40,12 @@ Admin - Korwil Member
                                                 $korwil = \App\Korwil::all();  
                                                 ?>
                                                 @foreach ($korwil2 as $n)
-                                                @foreach ($korwil as $d)
                                                 <tr>
                                                     <td style="text-align: center;">{{$i++}}</td>
                                                     <td style="text-align: center;">{{$n->nama}}</td>
+                                                @foreach ($korwil as $d)
                                                     <td style="text-align: center;">{{$d->nama}}</td>
+                                                @endforeach
                                                     <td style="text-align: center;">{{$n->kode}}</td>
                                                     <td class="datatable-ct"><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
                                                     <td class="datatable-ct"><a href="{{url('korwil2/edit/'.$n->id)}}"><i class="fa fa-pen"></i></a>
@@ -52,7 +53,6 @@ Admin - Korwil Member
                                                     <td class="datatable-ct"><a href="{{url('korwil2/delete/'.$n->id)}}"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                 </tr>
-                                                @endforeach
                                                 @endforeach
                                             </tbody>
                                         </table>

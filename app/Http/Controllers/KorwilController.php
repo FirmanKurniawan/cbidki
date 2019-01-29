@@ -47,7 +47,7 @@ class KorwilController extends Controller
     {
     	$u = Korwil::find($r->input('id'));
     	$u->nama = $r->input('nama');
-    	$u->keterangan = $r->input('keterangan');
+    	$u->keterangan= $r->input('keterangan');
     	if(Input::hasFile('logo')){
             $logo = date("YmdHis")
             .uniqid()
