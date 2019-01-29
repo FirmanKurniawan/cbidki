@@ -1,81 +1,116 @@
 @extends('layouts.user')
-@section('title')
-Member
-@endsection
 @section('content')
-<!-- Start service-page Area -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-<section class="service-page-area section-gap">
-            <form class="form-inline my-2 my-lg-0" action="{{url('member/search')}}" method="get">
-            <label for="formGroupExampleInput">Cari Anggota &nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="search" class="form-control" name="query" id="formGroupExampleInput" 
-            placeholder="Cari Disini ..." required>
-            <input type="hidden" name="search" value="1">
-          </form>
-          </div>
-          <div class="container">
-  <h2>Pencarian Autocomplete di Laravel Menggunakan Ajax</h2>
-  <br/>
-  <select class="cari form-control" style="width:500px;" name="cari"></select>
+   
+            <style>
+.bulat{
+border-radius:100em;
+opacity:1;
+width:200px;
+height:200px;
+}
+.tengah-teratur{
+    color: black;  
+    margin: 0 auto;
+    text-align: justify;
+    width: 10em;
+}
+</style>
+            <!-- Start service-page Area -->
+            <br><br>
+            <section class="service-page-area section-gap">
+                <h1 class="mb-10 header-text text-center">Cari Anggota</h1>
+                <div class="container" style="padding-top: 40px;">                         
+                    <div class="row">
+<div class="form-inline" style="margin-left: auto; margin-right: auto;">
+    <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit" data-target="#exampleModal" data-toggle="modal">Search</button>
+  </div>
+  </div>
+  <br>
+  <br>
+        <h1 class="mb-10 header-text text-center">Korwil</h1>
+                <br>
+                <br>
+                <div class="row">
+ 
+                    <!-- START FOREACH KORWIL -->
+                    <?php
+                    $i = 1;
+                    $kiwil = App\Korwil::all();
+ 
+                     ?>
+                     @foreach($kiwil as $k)
+                        <div class="col-lg-4 col-md-6">
+                                                       
+                                <h3 class="text-center"><img class="img-fluid bulat" src="{{ url('images/'.$k->logo) }}" alt="" style="width: 80px; height: 80px;">&nbsp;&nbsp;&nbsp;{{$k->nama}}</h3>
+                                <br>
+                                <?php
+                                    $km = App\Korwilmember::where('idkorwil',$k->id)->get();
+                                 ?>
+                                 @foreach($km as $ka)
+                                <ol class="text-justify" style="">
+                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;{{$ka->nama}}({{$ka->kode}})</h5></li>
+ 
+                                    </ol>
+                                    @endforeach
+<br>
 </div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-<script type="text/javascript">
-  $('.cari').select2({
-    placeholder: 'Cari...',
-    ajax: {
-      url: '/cari',
-      dataType: 'json',
-      delay: 250,
-      processResults: function (data) {
-        return {
-          results:  $.map(data, function (item) {
-            return {
-              text: item.email,
-              id: item.id
-            }
-          })
-        };
-      },
-      cache: true
-    }
-  });
-
-</script>
-          <div class="table-responsive">
-            <?php  
-            $id = 1;
-             $pem = \App\Member::all(); 
-            ?>
-             @foreach($pem as $q)
-            <table class="table" id="example">
-              <thead>
-                <tr>
-                  <th>Nama</th>
-                  <th>Alamat</th>
-                  <th>Nomor Identitas</th>
-                  <th>Foto</th>
-                  <th colspan="2">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-               
-                <tr>
-                  <td></td>
-                  <td>{{$q->nama}}</td>
-                  <td>{{$q->alamat}}</td>
-                  <td>{{$q->no_identitas}}</td>
-                  <td><img src="{{ url('images/'.$q->foto) }}" style="width: 70px; height: 70px"></td>
-                  <td>
-                   <a href="{{url('member'.$q->id)}}" onclick="return confirm('anda yakin untuk memilihnya ?')" 
-                     class="btn btn-outline-warning btn-sm">Pengembalian</a>
-                   </tr>
-                   @endforeach
-                 </tbody>
-               </table>
-             </div>	
-</section>
-<!-- End service-page Area -->
+@endforeach
+</div>
+ 
+<!-- END FOREACH -->
+                        </div> 
+ 
+                        </div>
+ 
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cari Anggota</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php  
+        $search = \Request::get('search');
+        $s = \App\Member::where('nama', 'like', '%'.$search.'%')->get();
+        ?>
+        @foreach($s as $z)
+        <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Nama</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">Nomor Identitas</th>
+      <th scope="col">Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{$z->nama}}</td>
+      <td>{{$z->alamat}}</td>
+      <td>{{$z->no_identitas}}</td>
+      <td><img src="{{ url('images/'.$z->foto) }}" style="width: 70px; height: 70px"></td>
+    </tr>
+  </tbody>
+  @endforeach
+</table>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+   
+</div>
+  </div>
+</div>
+                </div> 
+            </section>
+            <!-- End service-page Area -->
+           
+           
+           
 @endsection
