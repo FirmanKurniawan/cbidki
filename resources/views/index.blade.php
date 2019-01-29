@@ -45,8 +45,11 @@
 							</p>
 					
 						</div>
+						<?php
+							$z = \App\Profile::where('id', 1)->first();
+						?>
 						<div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex">
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('images/'.$q->gambar_about)}}" alt=""></a>
+							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('images/'.$z->gambar_about)}}" alt=""></a>
 						</div>
 					</div>
 				</div>	
