@@ -17,10 +17,10 @@
 							<h6>{!! $q->pengantar1 !!}</h6>
 							<span class="bar"></span>
 							<h1 class="text-white">
-								{!! $q->pengantar2 !!}<br>
+								{!! $q->pengantar2 !!}
 								{!! $q->pengantar3 !!}
 							</h1>
-							<a href="#" class="genric-btn">Book Consultancy</a>
+							
 						</div>
 					</div>
 				</div>
@@ -38,10 +38,9 @@
 							</h1>
 							<?php
 						$q = \App\History::where('id', 1)->first();
-
-				?>
+						?>
 							<p>
-								{{$q->history}}
+								{!!$q->history!!}
 							</p>
 					
 						</div>

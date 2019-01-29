@@ -89,50 +89,57 @@
   scrollbar-arrow-color: #6F4709;
 }
                 </style>
-                <div class="left-custom-menu-adp-wrap scroll">
+                <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
-                       
+
                         <li class="nav-item"><a href="{{url('/admin')}}"><i class="fa fa-tachometer-alt"></i>
                             <span class="mini-dn">Dashboard</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/profile')}}"><i class="fa fa-user"></i>
-                            <span class="mini-dn">Profile</span> <span class="indicator-right-menu"></span></a>
+
+                        <li class="nav-item">
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Profile Kami</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="{{url('/admin/profile')}}" class="dropdown-item"><i class="fa fa-user"></i>Profile</a>
+                                <a href="{{url('/admin/about')}}" class="dropdown-item"><i class="fa fa-globe"></i>About</a>
+                                <a href="{{url('/admin/footer')}}" class="dropdown-item"><i class="fa fa-font"></i>Footer</a>
+                                <a href="{{url('/admin/visimisi')}}" class="dropdown-item"><i class="fa fa-envelope"></i>Visi Misi</a>
+                                <a href="{{url('/admin/history')}}" class="dropdown-item"><i class="fa fa-history"></i>History</a>
+                            </div>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/about')}}"><i class="fa fa-globe"></i>
-                            <span class="mini-dn">About</span> <span class="indicator-right-menu"></span></a>
+
+                        <li class="nav-item">
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Gallery</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="{{url('admin/gallery2')}}" class="dropdown-item"><i class="fa fa-image"></i>Gallery</a>
+                                <a href="{{url('/admin/gallery')}}" class="dropdown-item"><i class="fab fa-gg-circle"></i>Multimedia</a>
+                            </div>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/visimisi')}}"><i class="fa fa-envelope"></i>
-                            <span class="mini-dn">Visi Misi</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                        <li class="nav-item"><a href="{{url('admin/gallery2')}}"><i class="fa fa-image"></i>
-                            <span class="mini-dn">Gallery</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                         <li class="nav-item"><a href="{{url('/admin/gallery')}}"><i class="fab fa-gg-circle"></i>
-                            <span class="mini-dn">Multimedia</span> <span class="indicator-right-menu"></span></a>
-                        </li>
+
+                        
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
                          <li class="nav-item"><a href="{{url('/admin/member')}}"><i class="fa fa-users"></i>
                             <span class="mini-dn">Member</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/korwil')}}"><i class="fa fa-road"></i>
-                            <span class="mini-dn">Korwil</span> <span class="indicator-right-menu"></span></a>
+
+
+                        <li class="nav-item">
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Korwil</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="{{url('/admin/korwil')}}" class="dropdown-item"><i class="fa fa-road"></i>Korwil</a>
+                                <a href="{{url('/admin/korwil2')}}" class="dropdown-item"><i class="fa fa-user-shield"></i>Korwil Member</a>
+                            </div>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/korwil2')}}"><i class="fa fa-user-shield"></i>
-                            <span class="mini-dn">Korwil Member</span> <span class="indicator-right-menu"></span></a>
-                        </li>
+
+
+
+
                         <li class="nav-item"><a href="{{url('/admin/merchandise')}}"><i class="fa fa-shopping-bag"></i>
                             <span class="mini-dn">Merchandise</span> <span class="indicator-right-menu"></span></a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/admin/history')}}"><i class="fa fa-history"></i>
-                            <span class="mini-dn">History</span> <span class="indicator-right-menu"></span></a>
-                        </li>
                         <li class="nav-item"><a href="{{url('/admin/berita')}}"><i class="far fa-newspaper"></i>
                             <span class="mini-dn">Berita</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                         <li class="nav-item"><a href="{{url('/admin/footer')}}"><i class="fa fa-font"></i>
-                            <span class="mini-dn">Footer</span> <span class="indicator-right-menu"></span></a>
                         </li>
                     </ul>
                 </div>

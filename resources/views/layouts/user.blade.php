@@ -44,7 +44,7 @@
 							?>
 			    		<div class="col-lg-4 col-sm-4 menu-top-left">
 			    			<a href="mailto:info@horseclub.com"><span class="lnr lnr-location"></span></a>
-			    			<a class="tel" href="mailto:info@horseclub.com">{{$q->email}}m</a>
+			    			<a class="tel" href="mailto:info@horseclub.com">{{$q->email}}</a>
 			    		</div>
 			    		<div class="col-lg-4 menu-top-middle justify-content-center d-flex">
 							<a href="{{url('/')}}">
