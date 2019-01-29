@@ -44,6 +44,7 @@ class MemberController extends Controller
             $m->foto = $filename1;
         }
         $m->save();
+<<<<<<< HEAD
         return redirect(url('/admin/member'));      
     }
     public function delete($id)
@@ -52,6 +53,18 @@ class MemberController extends Controller
         $m->delete();
         return redirect(url('/admin/member'));
     }
+=======
+        return redirect(url('/admin/member'));		
+	}
+
+	public function delete($id)
+	{
+		$m = Member::find($id);
+		$m->delete();
+		return redirect(url('/admin/member'));
+	}
+
+>>>>>>> 76a6494378a4e192bee578a092c6ef2106c0360c
     public function search(Request $request)
     {
     if ($request->has('name')) {

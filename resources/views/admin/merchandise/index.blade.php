@@ -13,7 +13,7 @@ Admin - Merchandise
                             <div class="sparkline13-list shadow-reset">
                                 <div class="sparkline13-hd">
                                     <div class="main-sparkline13-hd">
-                                        <h1>Marchandise<span class="table-project-n"></span></h1>
+                                        <h1>Merchandise<span class="table-project-n"></span></h1>
                                         <div class="sparkline13-outline-icon">
                                             <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                             <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
@@ -41,7 +41,7 @@ Admin - Merchandise
                                                 <tr>
                                                     <td>{{$i++}}</td>
                                                     <td>{{$n->nama}}</td>
-                                                    <td>{{$n->deskripsi}}</td>
+                                                    <td>{!!$n->deskripsi!!}</td>
                                                     <td><img src="{{ url('images/'.$n->logo) }}" style="width: 70px; height: 70px"></td>
 
                                                     <td class="datatable-ct">
@@ -95,13 +95,27 @@ Admin - Merchandise
                                                 <textarea class="contact-message" cols="30" rows="10" name="deskripsi"></textarea>
                                                 <i class="fa fa-comment login-user"></i>
                                             </div>
+                                    </div><br>
+                                    <br>
+                                    <div class="form-row">
+                                    <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>Logo</p>
+                                            </div>
+                                        </div><br>
+                                        <center>
+                                          <div class="form-group col-md-4">
+                                            <img src="{{asset('picture1/noimg.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 300px;height: 300px; margin-left: 90px;">
+                                            <center>
+                                                <div class="container-fluid" style="width: 100%;">                                            
+                                                    <input name="logo" type="file" class="ts-forms" style="" onchange="readURL1(this);" >
+                                                </div>
+
+                                            </center>
+                                          </div>
+                                          </center>
                                     </div>
-                        <div class="col-lg-8">
-                            <div class="login-input-area">
-                                <label>Logo</label>
-                                <input name="logo" type="file" class="ts-forms" style="">
-                            </div>
-                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
@@ -114,4 +128,19 @@ Admin - Merchandise
                 </div>
                 </form>
             </div>
+
+                <script type="text/javascript">
+                         function readURL1(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#blah1')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    }
+                }
+            </script>
 @endsection

@@ -55,7 +55,7 @@ Add - Member
                                       </div>
                                       <div class="form-row" style="float: right;">
                                         <div class="form-group" style="float: right;">
-                                            <button type="submit" class="btn btn-primary" style="float: right;"><i class="fa fa-edit"></i></button>
+                                            <button type="submit" class="btn btn-primary" style="float: right; margin-right: 40%;"><i class="fa fa-plus"></i></button>
                                         </div>
                                       </div>
                                 </div>
