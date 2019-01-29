@@ -66,21 +66,11 @@ class MemberController extends Controller
 
 
 
-    public function search2(Request $r)
+    public function search2($id)
     {
-        if ($r->has('nama')) {
-        return Member::where('nama','like','%'.$nama.'%')->get();
-        }
-    return response([]);
+        $design = Member::where('id',$id)->first();  
+        return response()->json($design);
     }
 
-    public function search(Request $request)
-    {
-        if ($request->has('q')) {
-                $cari = $request->q;
-                $data = Member::all();
-                return response()->json($data);
-        }
-    }
 
 }
