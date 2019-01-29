@@ -6,10 +6,6 @@
             <div class="login-form">
                 <div class="container-fluid">
                     <div class="row">
-                    	<?php
-                    		$member = \App\Member::all();
-                    	?>
-                    	@foreach ($member as $m)
                         <form action="{{url('admin/member/update')}}" method="POST" id="adminpro-order-form" class="adminpro-form" enctype="multipart/form-data">
                             @csrf
                             <div class="col-lg-12">
@@ -38,24 +34,10 @@
                                           <textarea type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat">{{$m->alamat}}</textarea>
                                         </div>
                                       </div>
-                                      {{-- <div class="form-row">
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                            <center>
-                                            <label>afas</label>
-                                            </center>
-                                          </div>
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                          </div>
-                                          <div class="form-group col-md-4">
-                                            <img src="{{asset('images/201901221517025c4733ee8e39a.png')}}" alt="Nature" class="responsive">
-                                          </div>
-                                      </div> --}}
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">
-                                            <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                            <img src="{{asset('images/'.$m->foto)}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                             <center>
                                             <label>Foto</label>
                                             </center>
@@ -77,7 +59,6 @@
                                 </div>
                             </div>
                         </form>
-                    	@endforeach
                         <div class="col-lg-3"></div>
                     </div>
                 </div>

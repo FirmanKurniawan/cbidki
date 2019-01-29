@@ -132,7 +132,7 @@
 								</p>
 							</div>
 						</div>		
-						<div class="col-lg-5  col-md-6 col-sm-6" style="margin-bottom: 12%;">
+						<div class="col-lg-2  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4>Newsletter</h4>
 								<p>You can trust us. we only send  offers, not a single spam.</p>

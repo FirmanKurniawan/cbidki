@@ -16,7 +16,7 @@
           <div class="table-responsive">
             <?php  
             $id = 1;
-             $pem = \App\Member::all()->where('id', $id); 
+             $pem = \App\Member::all(); 
             ?>
              @foreach($pem as $q)
             <table class="table" id="example">
@@ -32,6 +32,7 @@
               <tbody>
                
                 <tr>
+                  <td></td>
                   <td>{{$q->nama}}</td>
                   <td>{{$q->alamat}}</td>
                   <td>{{$q->no_identitas}}</td>
