@@ -8,24 +8,16 @@ Member
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 <section class="service-page-area section-gap">
-            <form class="form-inline my-2 my-lg-0" action="{{url('member/search')}}" method="get">
-            <label for="formGroupExampleInput">Cari Anggota &nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="search" class="form-control" name="query" id="formGroupExampleInput" 
-            placeholder="Cari Disini ..." required>
-            <input type="hidden" name="search" value="1">
-          </form>
-          </div>
-
-
-
-
-<div class="container">
-    <h1>Laravel 5.7 Autocomplete Search using Bootstrap Typeahead JS - ItSolutionStuff.com</h1>   
-
+<div class="container" style="margin-top: 5%;">
+    <center>
+    <h1>Cari Anggota</h1>
+    </center>   
     <input class="form-control" type="text" name="nama" id="data">
-    <input type="text" name="foto" id="foto">
+    <center>
+      <br>
+    <button class="btn btn-primary" id="submit" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-search"></i></button>
+    </center>
 </div>
-<button id="submit" data-toggle="modal" data-target="#exampleModal">tes</button>
 </div>
   
 <script type="text/javascript">
@@ -66,9 +58,9 @@ Member
         </button>
       </div>
       <div class="modal-body">
-      <input type="text" id="nama">
-      <input type="text" id="alamat">
-      <input type="text" id="no_identitas"> 
+      <input type="text" id="nama" readonly="true">
+      <input type="text" id="alamat" readonly="true">
+      <input type="text" id="no_identitas" readonly="true"> 
       <div id="gambar" class="img-fluid"></div>     {{-- <img src="{{url('images/'.$foto)}}"> --}}
       </div>
       <div class="modal-footer">
