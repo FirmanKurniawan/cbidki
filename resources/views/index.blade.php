@@ -1,7 +1,4 @@
 @extends('layouts.user')
-@section('title')
-Home
-@endsection
 @section('content')
 <!-- start banner Area -->
 
@@ -20,10 +17,10 @@ Home
 							<h6>{!! $q->pengantar1 !!}</h6>
 							<span class="bar"></span>
 							<h1 class="text-white">
-								{!! $q->pengantar2 !!}
+								{!! $q->pengantar2 !!}<br>
 								{!! $q->pengantar3 !!}
 							</h1>
-							
+							<a href="#" class="genric-btn">Book Consultancy</a>
 						</div>
 					</div>
 				</div>
@@ -34,41 +31,25 @@ Home
 			<section class="about-video-area section-gap">
 				<div class="container">
 					<div class="row">
+						<div class="col-lg-6 home-about-right">
+						<img src="{{asset('images/'.$q->gambar_about)}}" class="mx-auto d-block img-fluid">
+					</div>
+						
 						<div class="col-lg-6 about-video-left">
-							<h6 class="text-uppercase">History CB DKI Jakarta</h6>
+								<h6 class="text-uppercase">History CB DKI Jakarta</h6>
 							<h1>
 								History 
 							</h1>
 							<?php
 						$q = \App\History::where('id', 1)->first();
-						?>
+
+				?>
 							<p>
 								{!!$q->history!!}
 							</p>
-					
-						</div>
-						<?php
-							$z = \App\Profile::where('id', 1)->first();
-						?>
-						<div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex">
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="{{asset('images/'.$z->gambar_about)}}" alt=""></a>
-						</div>
 					</div>
 				</div>	
 			</section>
-			<!-- End about-video Area -->
-			
-			<!-- Start feature Area -->
-			
-			<!-- End feature Area -->
-			
-			
-			
-			
-
-			
-
-			<!-- Start latest-blog Area -->
 			<section class="latest-blog-area section-gap" id="blog">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
@@ -86,7 +67,7 @@ Home
 							 ?>
 							 @foreach($visi as $v)
 							<p>
-								{{$v->isi}}
+								{!!$v->isi!!}
 							</p>
 						@endforeach
 						</div>
@@ -97,7 +78,7 @@ Home
 							 ?>
 							 @foreach($misi as $m)
 							<p>
-								{{$m->isi}}
+								{!!$m->isi!!}
 							</p>
 						@endforeach
 						</div>						
