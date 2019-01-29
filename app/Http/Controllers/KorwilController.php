@@ -47,7 +47,7 @@ class KorwilController extends Controller
     {
     	$u = Korwil::find($r->input('id'));
     	$u->nama = $r->input('nama');
-    	$u->kode = $r->input('kode');
+    	$u->keterangan = $r->input('keterangan');
     	if(Input::hasFile('logo')){
             $logo = date("YmdHis")
             .uniqid()
@@ -103,8 +103,7 @@ class KorwilController extends Controller
 
     public function updatekorwilmember(Request $r)
     {
-    	$u = Korwil::find($r->input('id'));
-        $u->idkorwil = $r->input('idkorwil');
+    	$u = KorwilMember::find($r->input('id'));
     	$u->nama = $r->input('nama');
     	$u->kode = $r->input('kode');
     	if(Input::hasFile('logo')){

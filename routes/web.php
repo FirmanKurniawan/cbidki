@@ -140,14 +140,14 @@ Route::group(['prefix' => 'korwil'] , function(){
     Route::get('/', 'KorwilController@indexkorwil');
     Route::post('/save', 'KorwilController@savekorwil');
     Route::get('/edit/{id}', 'KorwilController@editkorwil');
-    Route::post('/update', 'KorwilController@upatekorwil');
+    Route::post('/update', 'KorwilController@updatekorwil');
     Route::get('/delete/{id}', 'KorwilController@deletekorwil');
 });
 Route::group(['prefix' => 'korwil2'] , function(){
     Route::get('/', 'KorwilController@indexkorwilmember');
     Route::post('/save', 'KorwilController@savekorwilmember');
     Route::get('/edit/{id}', 'KorwilController@editkorwilmember');
-    Route::post('/update', 'KorwilController@upatekorwilmember');
+    Route::post('/update', 'KorwilController@updatekorwilmember');
     Route::get('/delete/{id}', 'KorwilController@deletekorwilmember');
 });
 Route::post('/admin/visimisi/update', 'VisimisiController@visimisi_update');

@@ -28,7 +28,7 @@ Edit - Korwil
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputPassword4">Keterangan</label>
-                                          <input type="number" class="form-control" id="inputPassword4" placeholder="No Identitas" name="keterangan" value="{{$korwil->keterangan}}">
+                                          <input type="text" class="form-control" id="inputPassword4" placeholder="Keterangan" name="keterangan" value="{{$korwil->keterangan}}">
                                         </div>
                                       </div>
                                       <div class="form-row">
