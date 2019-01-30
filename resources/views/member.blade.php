@@ -27,7 +27,6 @@ height:150px;
 }
 </style>
 <!-- Start service-page Area -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 <section class="service-page-area section-gap">
@@ -110,7 +109,7 @@ height:150px;
 </div>
 
 
-<h1 class="mb-10 header-text text-left" style="margin-left: 40px;">Korwil</h1>
+<h1 class="mb-10 header-text text-left" style="margin-left: 60px;">Kordinasi Wilayah</h1>
                 <br>
                 <br>
                 <div class="row">
@@ -131,7 +130,7 @@ height:150px;
                                  ?>
                                  @foreach($km as $ka)
                                 <ol class="text-center" style="">
-                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
+                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
  
                                     </ol>
                                     @endforeach
