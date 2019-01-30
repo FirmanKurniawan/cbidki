@@ -70,7 +70,7 @@
         <div class="left-sidebar-pro">
             <nav id="sidebar" >
                 <div class="sidebar-header">
-                    <a href="#"><img src="{{url('images/201901221613065c4741121bc1f.jpg')}}" alt="" style="width: 150px;height: 150px;" />
+                    <a href="#"><img class="img-fluid" src="{{asset('cbi_user/img/CBI.png')}}" alt="" style="width: 150px;height: 100px;" />
                     </a>
                     <h3>{{ Auth::user()->name }}</h3>
                     <strong>CBI DKI</strong>
