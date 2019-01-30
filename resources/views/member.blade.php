@@ -135,12 +135,10 @@ height:150px;
                                     $km = App\Korwilmember::where('idkorwil',$k->id)->get();
                                  ?>
                                  @foreach($km as $ka)
-                                 <div class="text-justify" style="margin-left: 130px;">
-                                <ol class="text-justify">
-                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i> &nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
-
+                                <ol >
+                                  <li style="color: black;">
+                                    <br>  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i> &nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})    </li>
                                     </ol>
-                                  </div>
                                     @endforeach
 <br>
 </div>
