@@ -57,7 +57,9 @@ Admin - Korwil
                         <div class="col-lg-12">
                                 <div class="login-bg">
                                     <center>
+                                        <h4>
                                         <label>Tambah Data</label>
+                                        </h4>
                                         </center>
                                     <div class="row">
                                         <br>

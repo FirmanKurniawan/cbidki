@@ -56,11 +56,16 @@ Admin - Merchandise
                                     </div>
                                 </div>
                             </div> 
-                        </div>
+                        </div><br>
 
 
                         <div class="col-lg-12">
                                 <div class="login-bg">
+                                    <center>
+                                        <h4>
+                                        <label>Tambah Data</label>
+                                        </h4>
+                                    </center>
                                     <div class="row">
                                         <div class="col-lg-12">
                                         </div>

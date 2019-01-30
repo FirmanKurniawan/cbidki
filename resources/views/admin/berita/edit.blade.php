@@ -1,4 +1,4 @@
-  @extends('layouts.layouts-admin')
+@extends('layouts.layouts-admin')
 @section('title')
 Edit - Berita
 @endsection
@@ -51,7 +51,7 @@ Edit - Berita
                                       <div class="form-row">
                                         <center>
                                           <div class="form-group col-md-12">
-                                            <img src="{{asset('images/no-image.png')}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
+                                            <img src="{{url('images/'. $b->foto)}}" alt="Nature" class="responsive" id="blah1" style="width: 200px;height: 200px;">
                                             <center>
                                             <label>Foto</label>
                                             </center>
