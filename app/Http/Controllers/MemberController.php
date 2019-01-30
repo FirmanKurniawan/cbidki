@@ -60,3 +60,5 @@ class MemberController extends Controller
     }
     return redirect(url('admin/member'))->with('alert', 'Not Found');
 }
+}
+

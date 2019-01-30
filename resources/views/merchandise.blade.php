@@ -16,22 +16,26 @@ Merchandise
                ?>
                @foreach($merchandise as $q)
             <!-- START FOREACH GAMBAR -->
-						<div class="col-lg-4 cl-md-6">
-							<div class="single-training">
-								<div class="thumb relative">
-									<div class="overlay-bg"></div>
-									<img class="img-fluid" src="{{ url('images/'.$q->logo)}}" style="width: 400px; height: 300px;">	
+
+
+
+
+				
+						<div class="col-lg-4 col-md-6">
+							<div class="single-service-page">
+								<div class="thumbs relative">
+							
+									<img class="img-fluid" src="{{ url('images/'.$q->logo)}}" alt="" style="width: 300px; height: 200px;">
 								</div>
+								<br>
 								<div class="details">
-									<div class="title justify-content-between d-flex">
-									<h4>{{$q->nama}}</h4>
-									</div>
+									<a href="#"><h4>{{$q->nama}}</h4></a>
 									<p>
-										{{$q->deskripsi}}
-									</p>
+										{!!$q->deskripsi!!}
 								</div>
 							</div>
-						</div>
+						</div>	
+
             @endforeach
 						<!-- END FOREACH GAMBAR -->
 						</div>																		

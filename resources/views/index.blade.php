@@ -20,7 +20,6 @@
 								{!! $q->pengantar2 !!}<br>
 								{!! $q->pengantar3 !!}
 							</h1>
-							<a href="#" class="genric-btn">Book Consultancy</a>
 						</div>
 					</div>
 				</div>
