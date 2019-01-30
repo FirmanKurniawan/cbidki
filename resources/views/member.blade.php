@@ -31,6 +31,11 @@ height:150px;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 <section class="service-page-area section-gap">
 <div class="container" style="margin-top: 5%;">
+  @if (session('alert'))
+  <div class="alert alert-success">
+      {{ session('alert') }}
+  </div>
+  @endif
     <center>
     <h1>Cari Anggota</h1>
     </center>   
@@ -96,13 +101,14 @@ height:150px;
          <div class="float-right" style="margin-left: 30px;">  
           <label>Nama : <input type="text" id="nama" readonly="true" class="form-control" style="background-color: #fff"></label>
       <br>
-      <label>Alamat :<input type="text" id="alamat" readonly="true" class="form-control"style="background-color: #fff" ></label>
+      <label>Alamat :<textarea type="text" id="alamat" readonly="true" class="form-control"style="background-color: #fff" >></textarea></label>
       <br>
       <label>Nomor Identitas<input type="number" id="no_identitas" readonly="true" class="form-control"style="background-color: #fff"></label> 
           <!-- {{-- <img src="{{url('images/'.$foto)}}"> --}} -->
 
 </div>
 </div>
+
       </div>
     </div>
   </div>
@@ -129,10 +135,12 @@ height:150px;
                                     $km = App\Korwilmember::where('idkorwil',$k->id)->get();
                                  ?>
                                  @foreach($km as $ka)
-                                <ol class="text-center" style="">
-                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
- 
+                                 <div class="text-justify" style="margin-left: 130px;">
+                                <ol class="text-justify">
+                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i> &nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
+
                                     </ol>
+                                  </div>
                                     @endforeach
 <br>
 </div>

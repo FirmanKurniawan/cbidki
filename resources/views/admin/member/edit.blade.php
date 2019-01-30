@@ -34,7 +34,7 @@ Edit - Member
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputEmail4">Alamat</label>
-                                          <textarea id="ckeditor1" type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat">{{$m->alamat}}</textarea>
+                                          <textarea  type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat">{!!$m->alamat!!}</textarea>
                                         </div>
                                       </div>
                                       <div class="form-row">

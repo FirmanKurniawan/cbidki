@@ -21,6 +21,8 @@
 		<title>{{$q->nama}}</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link href="{{ asset('fontawesome-free-5.5.0-web/css/all.css') }}" rel="stylesheet">
+     <link href="{{ asset('fontawesome-free-5.5.0-web/css/all.min.css') }}" rel="stylesheet">
 			<!--
 			CSS
 			============================================= -->
