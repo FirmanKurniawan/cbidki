@@ -168,6 +168,10 @@ Route::get('/member2', function() {
 Route::get('/merchandise', function() {
     return view('merchandise');
 });
+Route::get('/berita', function() {
+    return view('berita');
+});
+Route::get('lengkap/{id}','BeritaController@baca');
 Route::get('member2/search2', 'MemberController@search2');
 Route::get('member/search', 'MemberController@search');
 Route::get('search2/{id}', 'MemberController@search2');

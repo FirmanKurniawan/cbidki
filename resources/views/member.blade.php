@@ -10,11 +10,20 @@ opacity:1;
 width:200px;
 height:200px;
 }
+.bulat2{
+border-radius:100em;
+opacity:1;
+width:150px;
+height:150px;
+}
 .tengah-teratur{
     color: black;  
     margin: 0 auto;
     text-align: justify;
     width: 10em;
+}
+.float-right{
+    font-family: "Candara";
 }
 </style>
 <!-- Start service-page Area -->
@@ -59,7 +68,7 @@ height:200px;
                   $('#alamat').val(results.alamat)
                   $('#no_identitas').val(results.no_identitas)
                   document.getElementById('gambar').innerHTML = 
-                    '<img src="images/'+results.foto+' "class="img-fluid" style="width:150px; height:150px; margin-left:30px;"/>';
+                    '<img src="images/'+results.foto+' "class="bulat2" style="margin-left:30px;"/>';
              }
         }); 
     });
@@ -85,13 +94,14 @@ height:200px;
          <div id="gambar" class="img-fluid">
          </div>
          </div>
-         <div class="float-right" style="margin-left: 30px;">
-      <label>Nama : <input type="text" id="nama" readonly="true" class="form-control"></label>
+         <div class="float-right" style="margin-left: 30px;">  
+          <label>Nama : <input type="text" id="nama" readonly="true" class="form-control" style="background-color: #fff"></label>
       <br>
-      <label>Alamat :<textarea type="text" id="alamat" readonly="true" class="form-control"></textarea></label>
+      <label>Alamat :<input type="text" id="alamat" readonly="true" class="form-control"style="background-color: #fff" ></label>
       <br>
-      <label>Nomor Identitas<input type="number" id="no_identitas" readonly="true" class="form-control"></label> 
-          {{-- <img src="{{url('images/'.$foto)}}"> --}}
+      <label>Nomor Identitas<input type="number" id="no_identitas" readonly="true" class="form-control"style="background-color: #fff"></label> 
+          <!-- {{-- <img src="{{url('images/'.$foto)}}"> --}} -->
+
 </div>
 </div>
       </div>
@@ -100,7 +110,7 @@ height:200px;
 </div>
 
 
-<h1 class="mb-10 header-text text-center">Korwil</h1>
+<h1 class="mb-10 header-text text-left" style="margin-left: 40px;">Korwil</h1>
                 <br>
                 <br>
                 <div class="row">
@@ -121,7 +131,7 @@ height:200px;
                                  ?>
                                  @foreach($km as $ka)
                                 <ol class="text-center" style="">
-                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;{{$ka->nama}}({{$ka->kode}})</h5></li>
+                                  <li><h5 class="">&nbsp;&nbsp;&nbsp;&nbsp;{{$i++}}.&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})</h5></li>
  
                                     </ol>
                                     @endforeach

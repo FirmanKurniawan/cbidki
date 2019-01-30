@@ -17,7 +17,11 @@ class BeritaController extends Controller
     {
     	return view('admin.berita.add');
     }
-    
+    public function baca($id)
+    {
+        $baca = Berita::find($id);
+        return view('lengkap')->with('baca',$baca);
+    }
     public function save(Request $r)
     {
     	$b = new Berita;

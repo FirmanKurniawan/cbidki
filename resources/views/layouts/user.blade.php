@@ -68,12 +68,7 @@
 				          <li><a href="{{url('about')}}">About</a></li>
 				          <li><a href="{{url('member')}}">Member</a></li>
 				          <li><a href="{{url('merchandise')}}">Merchandise</a></li>
-				          {{-- <li class="menu-has-children"><a href="">Blog</a>
-				            <ul>
-				              <li><a href="blog-home.html">Blog Home</a></li>
-				              <li><a href="blog-single.html">Blog Single</a></li>
-				            </ul>
-				          </li> --}}
+				        <li><a href="{{url('berita')}}">Berita</a></li>
 				          <li><a href="{{url('contact')}}">Contact</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		

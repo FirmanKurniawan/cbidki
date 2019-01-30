@@ -68,7 +68,7 @@ class MemberController extends Controller
 
     public function search2($id)
     {
-        $design = Member::where('id',$id)->first();  
+        $design = Member::where('no_identitas',$id)->first();  
         return response()->json($design);
     }
 
