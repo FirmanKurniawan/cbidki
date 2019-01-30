@@ -70,4 +70,9 @@ class BeritaController extends Controller
     	$b->delete();
     	return redirect(url('/admin/berita'));
     }
+    public function pagi()
+    {
+        $s = Berita::latest()->paginate(5);
+        return view('berita')->with('s',$s);
+    }
 }
