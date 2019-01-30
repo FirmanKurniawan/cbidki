@@ -54,11 +54,8 @@ class MemberController extends Controller
     }
     public function search2($id)
     {
-        if (Input::get('nama')){
         $design = Member::where('no_identitas',$id)->first();
         return response()->json($design);
     }
-    return redirect(url('admin/member'))->with('alert', 'Not Found');
-}
 }
 

@@ -60,6 +60,7 @@ height:150px;
 <br>
   
 <script type="text/javascript">
+
    $(document).ready(function() {
     $('#submit').click(function() {
         $.ajaxSetup({
@@ -72,26 +73,44 @@ height:150px;
              type:"GET",
              url:"search2/" + id,
              success : function(results) {
-                 $('#nama').val(results.nama)
-                  $('#alamat').val(results.alamat)
+              if (results.no_identitas) {
+                  document.getElementById('nama').innerHTML =
+                    '<label>Nama : </label>' +
+                    '<input class="form-control" type="text" readonly style="background-color:#fff;" value="'+results.nama+'">';
+                  document.getElementById('alamat').innerHTML =
+                    '<label>Alamat : </label>' +
+                    '<input class="form-control" type="text" readonly style="background-color:#fff;" value="'+results.alamat+'">';
+                  document.getElementById('no_identitas').innerHTML =
+                    '<label>No Identitas : </label>' +
+                    '<input class="form-control" type="text" readonly style="background-color:#fff;" value="'+results.no_identitas+'">';
                   $('#no_identitas').val(results.no_identitas)
                   document.getElementById('gambar').innerHTML = 
                     '<img src="images/'+results.foto+' "class="bulat2" style="margin-left:30px;"/>';
+
+                  }else{
+                    document.getElementById('no_identitas1').innerHTML =
+                    '<center><h1><i class="fas fa-times-circle fa-6x" style="color:red;margin-bottom:50px;margin-left:30px;"></i></h1></center>'+
+                    '<h2 style="margin-left:30px;">IDENTITAS TIDAK TERSEDIA</h2>';
+                  }
              }
         }); 
     });
-});  
+}); 
+
+
 </script>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<div class="modal fade" id="exampleModal">
+  <div>
+    <div class="modal-content" style="width: 500px;height: auto;margin-left: auto;margin-right: auto;margin-top: 7%;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Cari Anggota</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <form action="{{url('/member')}}">
+        <button type="submit" class="close" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+        </form>
       </div>
       <div class="modal-body">
       <div class="row">
@@ -101,16 +120,16 @@ height:150px;
          </div>
          </div>
          <div class="float-right" style="margin-left: 30px;">  
-          <label>Nama : <input type="text" id="nama" readonly="true" class="form-control" style="background-color: #fff"></label>
+          <div id="nama"></div>
       <br>
-      <label>Alamat :<textarea type="text" id="alamat" readonly="true" class="form-control"style="background-color: #fff" >></textarea></label>
+      <div id="alamat"></div>
       <br>
-      <label>Nomor Identitas<input type="number" id="no_identitas" readonly="true" class="form-control"style="background-color: #fff"></label> 
+      <div id="no_identitas"></div>
+      <div id="no_identitas1"></div>
           <!-- {{-- <img src="{{url('images/'.$foto)}}"> --}} -->
 
 </div>
 </div>
-
       </div>
     </div>
   </div>
