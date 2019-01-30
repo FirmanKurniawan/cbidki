@@ -10,6 +10,11 @@ opacity:1;
 width:200px;
 height:200px;
 }
+.kiwil
+{
+  position: sticky;
+ margin-left: 30px;
+}
 .bulat2{
 border-radius:100em;
 opacity:1;
@@ -135,7 +140,7 @@ height:150px;
                                     $km = App\Korwilmember::where('idkorwil',$k->id)->get();
                                  ?>
                                  @foreach($km as $ka)
-                                <ol >
+                                <ol class="kiwil">
                                   <li style="color: black;">
                                     <br>  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i> &nbsp;<img src="{{url('images/'.$ka->logo)}}" style="width: 50px;">&nbsp;{{$ka->nama}}&nbsp;({{$ka->kode}})    </li>
                                     </ol>
