@@ -82,7 +82,7 @@
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-4  col-md-6 col-sm-6">
+						<div class="col-lg-5  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<?php
 								$data = \App\Footer::where('id',1)->first();
@@ -97,12 +97,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-lg-4  col-md-6 col-sm-6">
+						<div class="col-lg-5  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4>Newsletter</h4>
 								<p>You can trust us. we only send  offers, not a single spam.</p>
 								<div class="d-flex flex-row">
-									  <form class="navbar-form" action="{{url('/admin/newsletter/save')}}" method="post">
+									  <form class="navbar-form" action="{{url('/admin/newsletter/save')}}" method="post" style="margin-bottom: 5%;">
 									  	@csrf
 									    <div class="input-group add-on align-items-center d-flex">
 									      	<input class="form-control" name="email" placeholder="Email address" required="" type="email">
@@ -114,27 +114,21 @@
 								</div>
 							</div>
 						</div>			
-						<div class="col-lg-4  col-md-6 col-sm-6">
+						<div class="col-lg-2  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
 								<h4>Follow Us</h4>
-								<div class="footer-bottom row" style="margin-top: -40px;">	
-								<div class="footer-social col-lg-8 col-sm-6">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-
-						</div>
-						</div>
-					</div>
+								<p>Let us be social</p>
+								<div class="footer-social">
+									<a href="#"><i class="fa fa-facebook" style="color: black;"></i></a>
+									<a href="#"><i class="fa fa-twitter" style="color: black; margin-left: 8%;"></i></a>
+									<a href="#"><i class="fa fa-dribbble" style="color: black; margin-left: 8%;"></i></a>
+									<a href="#"><i class="fa fa-instagram" style="color: black; margin-left: 8%;"></i></a>
+								</div>
 							</div>
-						</div>				
-			
-
-						</div>	
-
-						
-					<div class="footer-bottom row">
+						</div>
+					</div>				
+				</div>		
+				<div class="footer-bottom row">
 						<p class="footer-text scol-lg-8 col-md-12 col-sm-12" style="text-align: center;">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
