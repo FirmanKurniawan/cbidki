@@ -1,5 +1,10 @@
 @extends('layouts.user')
 @section('content')
+<style>
+	.tengah{
+		margin-left: 50%;
+	}
+</style>
 			<section class="blog-posts-area section-gap">
 				<div class="container">
 					<br>
@@ -11,7 +16,7 @@
 						<div class="col-lg-8 post-list blog-post-list">
 							<!-- START FOREACH -->
 							<?php
-						$berita = \App\Berita::all();
+						$berita = \App\Berita::latest()->paginate(env('PER_PAGE'));
 
 				?>
 				@foreach($berita as $br)
@@ -51,6 +56,7 @@
 								</div>
 							</div>
 							@endforeach
+		
 							<!-- ENDFOREACH -->
 																									
 						</div>
@@ -82,6 +88,7 @@
 							<div class="single-widget recent-posts-widget">
 								<h4 class="title">Recent Posts</h4>
 								<div class="blog-list ">
+										@foreach ($s as $r)
 									<div class="single-recent-post d-flex flex-row">
 										<div class="recent-thumb">
 											<img class="img-fluid" src="img/blog/r1.jpg" alt="">
@@ -89,63 +96,15 @@
 										<div class="recent-details">
 											<a href="blog-single.html">
 												<h4>
-													Home Audio Recording
-													For Everyone
+													{{$r->judul}} - {{$r->created_at->diffForHumans()}}
 												</h4>
 											</a>
 											<p>
-												02 hours ago
+												{!!str_limit(strip_tags($r->isi), 100)!!}
 											</p>
 										</div>
-									</div>	
-									<div class="single-recent-post d-flex flex-row">
-										<div class="recent-thumb">
-											<img class="img-fluid" src="img/blog/r2.jpg" alt="">
-										</div>
-										<div class="recent-details">
-											<a href="blog-single.html">
-												<h4>
-													Home Audio Recording
-													For Everyone
-												</h4>
-											</a>
-											<p>
-												02 hours ago
-											</p>
-										</div>
-									</div>	
-									<div class="single-recent-post d-flex flex-row">
-										<div class="recent-thumb">
-											<img class="img-fluid" src="img/blog/r3.jpg" alt="">
-										</div>
-										<div class="recent-details">
-											<a href="blog-single.html">
-												<h4>
-													Home Audio Recording
-													For Everyone
-												</h4>
-											</a>
-											<p>
-												02 hours ago
-											</p>
-										</div>
-									</div>	
-									<div class="single-recent-post d-flex flex-row">
-										<div class="recent-thumb">
-											<img class="img-fluid" src="img/blog/r4.jpg" alt="">
-										</div>
-										<div class="recent-details">
-											<a href="blog-single.html">
-												<h4>
-													Home Audio Recording
-													For Everyone
-												</h4>
-											</a>
-											<p>
-												02 hours ago
-											</p>
-										</div>
-									</div>																																					
+									</div>
+										@endforeach
 								</div>								
 							</div>
 
@@ -164,7 +123,11 @@
 
 						</div>
 					</div>
+
 				</div>	
+				<div class="tengah">
+									{!! $s->render() !!}
+							</div>	
 			</section>
 			<!-- End blog-posts Area -->
 			
