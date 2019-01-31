@@ -119,6 +119,9 @@
                          <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
                             <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
                         </li>
+                        <li class="nav-item"><a href="{{url('/admin/contact')}}"><i class="fa fa-envelope-square"></i>
+                            <span class="mini-dn">Contact</span> <span class="indicator-right-menu"></span></a>
+                        </li>
                          <li class="nav-item"><a href="{{url('/admin/member')}}"><i class="fa fa-users"></i>
                             <span class="mini-dn">Member</span> <span class="indicator-right-menu"></span></a>
                         </li>

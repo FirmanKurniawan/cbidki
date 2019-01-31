@@ -41,6 +41,9 @@ Route::get('/admin/visimisi', function(){
 Route::get('/admin/newsletter', function(){
     return view('admin.newsletter');
 });
+Route::get('/admin/contact', function(){
+    return view('admin.contact');
+});
 Route::get('/admin/footer',function(){
     return view('admin.footer');
 });
@@ -70,6 +73,10 @@ Route::get('/admin/history',function(){
 Route::get('/admin/newsletter', 'NewsletterController@index');
 Route::get('/admin/newsletter/delete/{id}', 'NewsletterController@delete');
 Route::post('/admin/newsletter/save', 'NewsletterController@save');
+//contact
+Route::get('/admin/contact', 'ContactController@index');
+Route::get('/admin/contact/delete/{id}', 'ContactController@delete');
+Route::post('/admin/contact/save', 'ContactController@save');
 //Member
     Route::get('/admin/member', 'MemberController@index');
     Route::get('/admin/member/add', 'MemberController@add');
