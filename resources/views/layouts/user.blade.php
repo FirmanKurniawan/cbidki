@@ -56,8 +56,8 @@
 							</a>			    			
 			    		</div>
 			    		<div class="col-lg-4 col-sm-4 menu-top-right">
-			    			<a class="tel" href="tel:+880 123 12 658 439">{{$q->telepon}}</a>
-			    			<a href="tel:+880 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
+			    			<a class="tel" href="https://api.whatsapp.com/send?phone={{$q->telepon}}">{{$q->telepon}}</a>
+			    			<a href="https://api.whatsapp.com/send?phone={{$q->telepon}}"><span class="lnr lnr-phone-handset"></span></a>
 			    		</div>
 			    	</div>
 			    </div>	

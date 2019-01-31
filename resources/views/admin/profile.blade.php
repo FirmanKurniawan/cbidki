@@ -45,7 +45,7 @@ Admin - Profile
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputPassword4">Telepon</label>
-                                          <input type="number" class="form-control" id="inputCity" name="telepon" placeholder="Telepon" value="{{$p->telepon}}">
+                                          <input type="number" class="form-control" id="inputCity" name="telepon" placeholder="62...." value="{{$p->telepon}}">
                                         </div>
                                       </div>
                                       <div class="form-row">
