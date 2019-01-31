@@ -50,8 +50,20 @@ Admin - Profile
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-12">
-                                          <label for="inputCity">Fanspage</label>
-                                          <input type="text" class="form-control" id="inputCity" name="fanspage" placeholder="Fanspage" value="{{$p->fanspage}}">
+                                          <label for="inputCity">Facebook</label>
+                                          <input type="text" class="form-control" id="inputCity" name="facebook" placeholder="Input URL in here" value="{{$p->facebook}}">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Twitter</label>
+                                          <input type="text" class="form-control" id="inputCity" name="twitter" placeholder="Input URL in here" value="{{$p->twitter}}">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputCity">Instagram</label>
+                                          <input type="text" class="form-control" id="inputCity" name="instagram" placeholder="Input URL in here" value="{{$p->instagram}}">
                                         </div>
                                       </div>
                                       <div class="form-row">

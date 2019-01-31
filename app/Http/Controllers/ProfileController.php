@@ -16,27 +16,31 @@ class ProfileController extends Controller
     public function update(Request $r)
     {
         $id = $r->id;
-    	$nama = $r->nama;
-    	$alamat = $r->alamat;
-    	$telepon = $r->telepon;
-    	$email = $r->email;
-    	$fanspage = $r->fanspage;
-    	$pengantar1 = $r->pengantar1;
-    	$pengantar2 = $r->pengantar2;
-    	$pengantar3 = $r->pengantar3;
+        $nama = $r->nama;
+        $alamat = $r->alamat;
+        $telepon = $r->telepon;
+        $email = $r->email;
+        $facebook = $r->facebook;
+        $twitter = $r->twitter;
+        $instagram = $r->instagram;
+        $pengantar1 = $r->pengantar1;
+        $pengantar2 = $r->pengantar2;
+        $pengantar3 = $r->pengantar3;
         $gambar_depan = $r->gambar_depan;
         $gambar_about = $r->gambar_about;
         $gambar_belakang = $r->gambar_belakang;
 
-    	$profile = Profile::find(1);
-    	$profile->nama = $nama;
-    	$profile->alamat = $alamat;
-    	$profile->telepon = $telepon;
-    	$profile->email = $email;
-    	$profile->fanspage = $fanspage;
-    	$profile->pengantar1 = $pengantar1;
-    	$profile->pengantar2 = $pengantar2;
-    	$profile->pengantar3 = $pengantar3;
+        $profile = Profile::find(1);
+        $profile->nama = $nama;
+        $profile->alamat = $alamat;
+        $profile->telepon = $telepon;
+        $profile->email = $email;
+        $profile->facebook = $facebook;
+        $profile->twitter = $twitter;
+        $profile->instagram = $instagram;
+        $profile->pengantar1 = $pengantar1;
+        $profile->pengantar2 = $pengantar2;
+        $profile->pengantar3 = $pengantar3;
 
         if (Input::hasFile('gambar_depan')) {
             $file1 = $r->file('gambar_depan');

@@ -120,10 +120,14 @@
 								<h4>Follow Us</h4>
 								<p>Let us be social</p>
 								<div class="footer-social">
-									<a href="#"><i class="fa fa-facebook" style="color: black;"></i></a>
-									<a href="#"><i class="fa fa-twitter" style="color: black; margin-left: 8%;"></i></a>
-									<a href="#"><i class="fa fa-dribbble" style="color: black; margin-left: 8%;"></i></a>
-									<a href="#"><i class="fa fa-instagram" style="color: black; margin-left: 8%;"></i></a>
+									<?php  
+									$profile = \App\Profile::all()->where('id', 1);
+                                    ?>
+                                    @foreach($profile as $p)
+									<a href="{{$p->facebook}}" target="_blank"><i class="fa fa-facebook" style="color: black;"></i></a>
+									<a href="{{$p->twitter}}" target="_blank"><i class="fa fa-twitter" style="color: black; margin-left: 8%;"></i></a>
+									<a href="{{$p->instagram}}" target="_blank"><i class="fa fa-instagram" style="color: black; margin-left: 8%;"></i></a>
+									@endforeach
 								</div>
 							</div>
 						</div>

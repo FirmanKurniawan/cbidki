@@ -19,7 +19,9 @@ class CreateProfilesTable extends Migration
             $table->text('alamat')->nullable();
             $table->string('telepon')->nullable();
             $table->string('email')->nullable();
-            $table->string('fanspage')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
             $table->string('pengantar1')->nullable();
             $table->string('pengantar2')->nullable();
             $table->string('pengantar3')->nullable();
