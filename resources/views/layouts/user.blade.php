@@ -13,6 +13,7 @@
 		<meta name="keywords" content="">
 		<!-- meta character set -->
 		<meta charset="UTF-8">
+		<title>@yield('title')</title>
 		<!-- Site Title -->
 		<?php
 	$q = \App\Profile::where('id', 1)->first();
