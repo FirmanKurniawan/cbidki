@@ -115,12 +115,12 @@
                             </div>
                         </li>
 
-                        
-                         <li class="nav-item"><a href="{{url('/admin/newsletter')}}"><i class="fa fa-envelope-square"></i>
-                            <span class="mini-dn">News Letter</span> <span class="indicator-right-menu"></span></a>
-                        </li>
-                        <li class="nav-item"><a href="{{url('/admin/contact')}}"><i class="fa fa-envelope-square"></i>
-                            <span class="mini-dn">Contact</span> <span class="indicator-right-menu"></span></a>
+                        <li class="nav-item">
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Message</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="{{url('admin/newsletter')}}" class="dropdown-item"><i class="fa fa-envelope-square"></i> News Letter</a>
+                                <a href="{{url('/admin/contact')}}" class="dropdown-item"><i class="fa fa-comments"></i>Contact</a>
+                            </div>
                         </li>
                          <li class="nav-item"><a href="{{url('/admin/member')}}"><i class="fa fa-users"></i>
                             <span class="mini-dn">Member</span> <span class="indicator-right-menu"></span></a>

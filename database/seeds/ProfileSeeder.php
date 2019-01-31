@@ -20,9 +20,9 @@ class ProfileSeeder extends Seeder
             'facebook' => 'https://www.facebook.com/CB-DKI-Jakarta-792275537530085/',
             'twitter' => 'https://twitter.com/cb_djakarta',
             'instagram' => 'https://www.instagram.com/cbindonesia/',
-            'pengantar1' => 'pengantar1',
-            'pengantar2' => 'pengantar2',
-            'pengantar3' => 'pengantar3',
+            'pengantar1' => 'lorem ipsum 1',
+            'pengantar2' => 'lorem ipsum 2',
+            'pengantar3' => 'lorem ipsum 3',
             'gambar_depan' => 'no-image.png',
             'gambar_about' => 'no-image.png',
             'gambar_bawah' => 'no-image.png'
